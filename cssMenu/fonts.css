@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?o7m785');
+  src:  url('../fonts/icomoon.eot?o7m785#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?o7m785') format('truetype'),
+    url('../fonts/icomoon.woff?o7m785') format('woff'),
+    url('../fonts/icomoon.svg?o7m785#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail:before {
+  content: "\e901";
+}
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-database:before {
+  content: "\e964";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-tux:before {
+  content: "\eabd";
+}
+.icon-windows:before {
+  content: "\eac1";
+}
+
