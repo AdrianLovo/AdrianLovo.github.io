@@ -102,17 +102,7 @@ span{
     width: 100%;
     position: fixed;   
 }
-/*Efecto de sombra a div*/
-.caja:hover{
-    box-shadow: inset 0px 0px 50px 1px #EDE6E6,3px 3px 4px 1px #242424;
-    -webkit-box-shadow: inset 0px 0px 50px 1px #EDE6E6,3px 3px 4px 1px #242424;
-    -moz-box-shadow: inset 0px 0px 50px 1px #EDE6E6,3px 3px 4px 1px #242424;
-    -o-box-shadow: inset 0px 0px 50px 1px #EDE6E6,3px 3px 4px 1px #242424;
-    position: relative;
-    -webkit-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    transform: scale(1.01);
-}
+
 td:hover{
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
