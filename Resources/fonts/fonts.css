@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('icomoon.eot?jjhkqj');
-  src:  url('icomoon.eot?jjhkqj#iefix') format('embedded-opentype'),
-    url('icomoon.ttf?jjhkqj') format('truetype'),
-    url('icomoon.woff?jjhkqj') format('woff'),
-    url('icomoon.svg?jjhkqj#icomoon') format('svg');
+  src:  url('icomoon.eot?kcp2qs');
+  src:  url('icomoon.eot?kcp2qs#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?kcp2qs') format('truetype'),
+    url('icomoon.woff?kcp2qs') format('woff'),
+    url('icomoon.svg?kcp2qs#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -51,6 +51,9 @@
 .icon-java:before {
   content: "\e901";
   color: #007396;
+}
+.icon-home:before {
+  content: "\e906";
 }
 .icon-book:before {
   content: "\e91f";
