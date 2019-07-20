@@ -62,4 +62,9 @@ function Barras(){
         function(){
         $(this).removeClass("progress-striped active");
     });
+    $("#Barra9").hover(function(){
+        $(this).addClass("progress-striped active");}, 
+        function(){
+        $(this).removeClass("progress-striped active");
+    });
 }
