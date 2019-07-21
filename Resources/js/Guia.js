@@ -2,6 +2,7 @@ function MostrarListaUno(){
   $("#ListaUno").show();
   $("#ListaSQL").hide();
   $("#ListaGit").hide(); 
+  $("#ListaVue").hide(); 
 }
 
 function MostrarLista(numero){
