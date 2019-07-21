@@ -11,13 +11,18 @@ function MostrarLista(numero){
     case 0:  
       $("#ListaSQL").show(); 
       $("#ListaGit").hide();
+      $("#ListaVue").hide();
       break;
-  }
-  switch (numero){
     case 1:  
       $("#ListaSQL").hide();
       $("#ListaGit").show(); 
+      $("#ListaVue").hide();
       break;
+    case 2:  
+      $("#ListaSQL").hide();
+      $("#ListaGit").hide(); 
+      $("#ListaVue").show();
+      break;  
   }
 }
 
@@ -26,7 +31,8 @@ function MostrarCodigo(titulo, contenido) {
   $("#CodigoContenido").empty();
   var Titulo = [
       "SQL (Structured Query Language)",
-      "Git / GitHub"
+      "Git / GitHub",
+      "Vue.js"
   ];
 
   switch (titulo){
