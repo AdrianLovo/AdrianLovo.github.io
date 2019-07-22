@@ -16,3 +16,6 @@
 	color: black;
 	font-size: 15px;
 }
+.list-group-item{
+	position: static;
+}
