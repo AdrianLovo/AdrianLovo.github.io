@@ -9,15 +9,15 @@
         
         <title>Adrian Humberto Castillo Lovo</title>
         <link rel="shortcut icon" href="Resources/img/favicon.ico">
-
       
         <link rel="stylesheet" href="Resources/css/estilos.css">
         <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">
         <link rel="stylesheet" type="text/css" href="Resources/css/menu.css">
-        <link rel="stylesheet" href="Resources/css/bootstrap.min.css">        
-
+        <link rel="stylesheet" href="Resources/css/bootstrap.min.css">      
+        <link rel="stylesheet" href="Resources/css/Libros.css">    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <script src="Resources/js/vue.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
@@ -25,27 +25,25 @@
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-
           gtag('config', 'UA-144197995-1');
         </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-   
         
     </head>
     
     <body>
 
         <header>            
-            <div>
-                <!--Menu Principal-->
+            <div id="Menu">
+                 <!--Menu Principal-->
                 <div class="fijo">
                     <div class="menu_bar">
-                        <a class="bt-menu"><span class="icon-menu"></span>Menu</a>
+                        <a class="bt-menu"><span class="icon-menu"></span>Menu</a>         
                     </div>  
                     <nav>
-                        <ul>                        
+                        <ul>  
+                            <li>
+                                <a style="text-decoration: none; color: white" href="index.html"><span class="icon-home"></span> Inicio</a>
+                            </li>                                                                           
                             <li>
                                 <a style="text-decoration: none; color: white" data-toggle="modal" data-target="#ModalDatos"><span class="icon-user"></span>Datos personales</a>
                             </li>                            
@@ -109,28 +107,16 @@
     
 
         <div class="container">
-            <h1 class="lead" style="margin-top:75px">•Sobre algunos libros leidos</h1>
+            <h1 class="lead" style="margin-top:75px">•Guias y Codigo</h1>
         </div>
+        
+                     
 
-              
-        <div id="Catalogo">
-
-            <!--<input type="search" v-model="busqueda" placeholder="Busca aquí tu película..."> -->
-            <ul>            
-                <li v-for="libro in buscarPorTitulo" class="caratula">
-                    <img :src="libro.imagen" height="180" width="200">
-                    {{ libro.titulo }}                                       
-                </li>                   
-            </ul> 
-        </div>
-
-
-
-
-       
         <script src="Resources/js/vendor/modernizr-2.8.3.min.js"></script>               
-        <script src="Resources/js/index.js"></script>    
-        <script src="Resources/js/Libros.js"></script>                     
+        <script src="Resources/js/index.js"></script>  
+        <script src="Resources/Libros.js"></script> 
+        
+
        
     </body>
 </html>

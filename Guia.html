@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="Resources/css/Guia.css">    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <script src="Resources/js/vue.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
@@ -34,8 +35,8 @@
     <body>
 
         <header>            
-            <div>
-                <!--Menu Principal-->
+            <div id="Menu">
+                 <!--Menu Principal-->
                 <div class="fijo">
                     <div class="menu_bar">
                         <a class="bt-menu"><span class="icon-menu"></span>Menu</a>         
@@ -55,7 +56,7 @@
                                 <a style="text-decoration: none; color: white" href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span> Contactar</a>
                             </li>
                             <li>
-                                <a style="text-decoration: none; color: white" href="" title="Guias y Codigo"><span class="icon-embed"></span> Guias y Codigo</a>
+                                <a style="text-decoration: none; color: white" href="Guia.html" title="Guias y Codigo"><span class="icon-embed"></span> Guias y Codigo</a>
                             </li>
                             <li>
                                 <a style="text-decoration: none; color: white" href="" title="Sobre libros leidos"><span class="icon-book"></span> Sobre Libros</a>
@@ -117,109 +118,59 @@
               <div id="PanelPrincipal" class="panel-body">
 
                     <!-- SQL -->
-                    <ul id="ListaUno" class="list-group" style="margin-top: 15px">
-                      <li class="list-group-item TituloGuia" onclick="MostrarLista(0)">
-                        <span class="badge">10</span>
-                        <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> <b>SQL (Structured Query Language)</b>
-                      </li>
-                       <li class="list-group-item TituloGuia" onclick="MostrarLista(1)">
-                        <span class="badge">0</span>
-                        <img src="Resources/img/Lenguajes/Git.png" width="25px" height="25px"> <b> Git / GitHub</b>
-                      </li>
-                      <li class="list-group-item TituloGuia" onclick="MostrarLista(2)">
-                        <span class="badge">0</span>
-                        <img src="Resources/img/Lenguajes/vuejs.png" width="25px" height="25px"> <b> Vue.js</b>
-                      </li>
-                    </ul>
+                    <ul v-if="ListaUno == true" class="list-group" style="margin-top: 15px">
+                        
+                        <li v-for="tecnologias in Tecnologias" class="list-group-item TituloGuia" @click="MostrarLista(tecnologias.id)">
+                            <span class="badge">{{tecnologias.entradas}}  </span>                           
+                            <img :src="tecnologias.imagen" width="25px" height="25px"><b>{{tecnologias.nombre}}</b>                                      
+                        </li>                
 
+                    </ul>                                        
 
-                    <ul id="ListaSQL" class="list-group TituloOculto">
-                        <button onclick="MostrarListaUno()" type="button" class="btn btn-default">Regresar</button>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 0)" title="Mostrar Ejemplo">
+                    <ul v-if="ListaSql === true" class="list-group" v-show="ListaSql">
+                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>                        
+                        <li v-for="item in ItemSql" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(0, item.id)">
                             <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> SELECT, DISTINCT y ORDER BY 
+                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
                             </a>
                         </li>  
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 1)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> WHERE
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 2)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> AND OR y NOT
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 3)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> IN
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 4)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> BETWEEN
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 5)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> LIKE
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 6)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> INNER JOIN, LEFT JOIN, RIGHT JOIN
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 7)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> COUNT, AVG, SUM, MAX, MIN
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 8)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> GROUP BY
-                            </a>
-                        </li>
-                        <li class="list-group-item TituloGuia TituloAnimado" onclick="MostrarCodigo(0, 9)" title="Mostrar Ejemplo">
-                            <a class="TextoModal">
-                            <img src="Resources/img/Lenguajes/SQL.png" width="25px" height="25px"> HAVING
-                            </a>
-                        </li>                 
                     </ul>
 
-                    <ul id="ListaGit" class="list-group TituloOculto">
-                        <button onclick="MostrarListaUno()" type="button" class="btn btn-default">Regresar</button>
-                        </li>                                          
+                    <ul v-if="ListaGit === true" class="list-group" v-show="ListaGit">
+                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button> 
+                        <li v-for="item in ItemGit" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(1, item.id)">
+                            <a class="TextoModal">
+                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
+                            </a>
+                        </li>                                                        
                     </ul>
 
-                    <ul id="ListaVue" class="list-group TituloOculto">
-                        <button onclick="MostrarListaUno()" type="button" class="btn btn-default">Regresar</button>
-                        </li>                                          
+                    <ul v-if="ListaVue === true"  class="list-group" v-show="ListaVue">
+                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>
+                        <li v-for="item in ItemVue" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(2, item.id)">
+                            <a class="TextoModal">
+                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
+                            </a>
+                        </li> 
                     </ul>
-
-
-
-
 
 
                     <!-- Modal Datos -->
-                    <div class="modal fade" id="ModalCodigo" role="dialog" style="margin-top: 100px; width: 100%" >
-                        <div class="modal-dialog modal-lg">
+                    <div class="modal" role="dialog" :class="{show:ModalMostra}" style="margin-top: 100px; width: 100%">
+                           <div class="modal-dialog modal-lg">
             
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <center>
-                                        <h4 class="modal-title"><a id="CodigoTitulo">asdasdasd</a></h4>
+                                        <h4 class="modal-title">{{$data.TituloModal}}</h4>
                                     </center>
                                 </div>
 
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         
                                    <div id="CodigoContenido">
-                                     
-
-                                       
+                                     <div v-html="CodigoModal"></div>      
+                                     <center><button type='button' class='btn btn-info' @click="CerrarModal()">Cerrar</button></center>                                 
                                    </div> 
 
                                 </div>    
@@ -229,23 +180,15 @@
                         </div>
                     </div>    
 
-
-
-
-
-
-
-
                 </div>
             </div>
             
-        </div>
-      
+        </div>      
 
         <script src="Resources/js/vendor/modernizr-2.8.3.min.js"></script>               
         <script src="Resources/js/index.js"></script>   
         <script src="Resources/prism/prism.js"></script>  
-        <script src="Resources/js/Guia.js"></script>                       
-       
+        <script src="Resources/js/Guia.js"></script>  
+               
     </body>
 </html>
