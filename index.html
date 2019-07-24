@@ -14,7 +14,8 @@
         <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">
         <link rel="stylesheet" type="text/css" href="Resources/css/menu.css">
         <link rel="stylesheet" type="text/css" href="Resources/css/Lenguajes.css">
-        <link rel="stylesheet" href="Resources/css/bootstrap.min.css">        
+        <link rel="stylesheet" href="Resources/css/bootstrap.min.css">
+        <script src="Resources/js/vue.js"></script>        
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
@@ -37,7 +38,7 @@
         <header>            
             <div>
                 <!--Menu Principal-->
-                <div class="fijo">
+                <div id="Menu" class="fijo">
                     <div class="menu_bar">
                         <a class="bt-menu"><span class="icon-menu"></span>Menu</a>
                     </div>  
@@ -57,10 +58,10 @@
                             </li>
                             <li>
                                 <a style="text-decoration: none; color: white" href="" title="Sobre libros leidos"><span class="icon-book"></span> Sobre Libros</a>
-                            </li>                                      
+                            </li>                                    
                         </ul>
                     </nav>
-                </div>               
+                </div>       
 
                 <!-- Modal Datos Personales-->
                 <div class="modal fade" id="ModalDatos" role="dialog">
@@ -111,7 +112,6 @@
         <div class="row-fluid" style="margin-bottom: 20px;">
             <img src="Resources/img/Img1.jpg" class="foto">
         </div>
-
 
         <div class="container">
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
@@ -297,3 +297,4 @@
        
     </body>
 </html>
+

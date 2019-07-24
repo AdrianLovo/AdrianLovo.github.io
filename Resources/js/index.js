@@ -68,3 +68,4 @@ function Barras(){
         $(this).removeClass("progress-striped active");
     });
 }
+

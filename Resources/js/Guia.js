@@ -8,14 +8,17 @@ var vm = new Vue({
 		ListaGit: false,
 		ListaVue: false,
 		ModalMostra: false,		
+		DivMostrar: false,
 
 		TituloModal: '',
 		CodigoModal: '',
+		TituloDiv: '',
+		CodigoDiv: '',
 
 		Tecnologias: [
 			{id: 0, nombre: 'SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'},
 			{id: 1, nombre: 'Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
-			{id: 2, nombre: 'Vue.js', entradas: 0, imagen: 'Resources/img/Lenguajes/vuejs.png'}
+			{id: 2, nombre: 'Vue.js', entradas: 1, imagen: 'Resources/img/Lenguajes/vuejs.png'}
 		],
 
 		ItemSql: [
@@ -36,7 +39,7 @@ var vm = new Vue({
 		],
 
 		ItemVue: [
-			
+			{id: 0, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Instanciar Vue.js'},
 		],
 
 		CodeSql: [
@@ -51,6 +54,10 @@ var vm = new Vue({
 	        {codigo: "<pre class='language-sql'> <span class='token function'>GROUP BY</span><br><br> <span class='token keyword'>SELECT</span> last_name, count(last_name) <span class='token keyword'>FROM </span><span class='token string'>actor </span><span class='token keyword'>GROUP BY</span> last_name;<br><br> <span class='token keyword'>SELECT</span> A.customer_id, B.first_name, B.last_name, <span class='token keyword'>SUM</span>(A.amount)<br> <span class='token keyword'>FROM </span><span class='token string'>payment </span>A <span class='token keyword'>INNER JOIN</span> <span class='token string'>customer </span>B <span class='token keyword'>ON </span>A.customer_id=B.customer_id <br> <span class='token keyword'>GROUP BY</span> A.customer_id, B.first_name, B.last_name; </pre>"},
 	        {codigo: "<pre class='language-sql'> <span class='token function'>HAVING</span><br><br> <span class='token keyword'>SELECT </span>last_name, count(*) <span class='token keyword'>FROM </span><span class='token string'>actor </span><span class='token keyword'>GROUP BY</span> last_name <span class='token keyword'>HAVING COUNT</span>(last_name) > 3;<br><br> <span class='token keyword'>SELECT</span> <span class='token string'>B.customer_id, B.first_name, B.last_name,</span> <span class='token keyword'>SUM</span>(A.amount)<br> <span class='token keyword'>FROM </span>payment A <span class='token keyword'>INNER JOIN</span> customer B <span class='token keyword'>ON </span>B.customer_id=A.customer_id<br> <span class='token keyword'>GROUP BY</span> B.customer_id, B.first_name, B.last_name<br> <span class='token keyword'>HAVING SUM</span>(A.amount) < 60<br> <span class='token keyword'>ORDER BY</span> <span class='token keyword'>SUM</span>(A.amount) <span class='token keyword'>DESC</span>; </pre>"}
       ],
+
+      CodeVue:[
+      	{codigo: "<pre class='language-js'> <span class='token keyword'>var </span>vm<span class='token tag'> = new</span> Vue({		//Instancia de Vue <br><br> &nbsp;&nbsp;&nbsp;&nbsp;el: <span class='token function'>'#selector'</span>, 	//Selector al que se enlazara la instancia Vue, no puede enlazarse a body ni html <br><br> &nbsp;&nbsp;&nbsp;&nbsp;data: {			//Datos dentro de la instancia<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mensaje:<span class='token boolean'> 'Esto es un string',</span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numero: <span class='token boolean'>2</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booleano: <span class='token function'>true</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unArray: [],<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unObjeto: {nombre: <span class='token function'>'Adrian'</span>, apellido:<span class='token function'> 'Castillo'</span>}<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> })<br>//Vue es totalmente reactivo por lo que se pueden ralizar asignaciones como vm.numero= 100 en consola<br> </pre> <pre class='language-html'><br> <<span class='token tag'>div </span><span class='token string'>id</span>=<span class='token function'>'selector'</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<<span class='token tag'>div</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.mensaje}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.numero}} <<span class='token tag'>br</span>><br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.booleano}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unArray}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unObjeto}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<span class='token tag'><span class='token punctuation'>&lt;/</span>div</span><br> <span class='token tag'><span class='token punctuation'>&lt;/</span>div</span>"},
+      ]
 
 	},
 
@@ -77,22 +84,28 @@ var vm = new Vue({
 			this.ListaSql = false;
 			this.ListaGit = false;
 			this.ListaVue = false;
+			this.DivMostrar = false;			
 		},
 
 		MostrarCodigo: function(tecnologia, id){
-			this.TituloModal = this.Tecnologias[tecnologia].nombre;
 			switch (tecnologia){
 				case 0: 
+					this.TituloModal = this.Tecnologias[tecnologia].nombre;
 					this.CodigoModal = this.CodeSql[id].codigo;
+					this.ModalMostra = true;
 					break;
 				case 1: 
+					this.TituloModal = this.Tecnologias[tecnologia].nombre;
 					this.CodigoModal = this.CodeSql[id].codigo;
+					this.ModalMostra = true;
 					break;
 				case 2: 
-					this.CodigoModal = this.CodeSql[id].codigo;
+					this.DivMostrar = true;
+					this.TituloDiv = this.Tecnologias[tecnologia].nombre;
+					this.CodigoDiv = this.CodeVue[id].codigo;
 					break;
 			}	
-			this.ModalMostra = true;		
+					
 		},
 
 		CerrarModal: function(){

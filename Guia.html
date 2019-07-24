@@ -112,10 +112,10 @@
             <h1 class="lead" style="margin-top:75px">•Guias y Codigo</h1>
         </div>
         
-        <div class="container">
+        <div id="PanelPrincipal" class="container">
                 
             <div class="panel panel-default">
-              <div id="PanelPrincipal" class="panel-body">
+              <div class="panel-body">
 
                     <!-- SQL -->
                     <ul v-if="ListaUno == true" class="list-group" style="margin-top: 15px">
@@ -181,6 +181,11 @@
                     </div>    
 
                 </div>
+            </div>
+
+            <div v-show="DivMostrar">
+                <center><h2>Codigo JS | HTML</h2></center>
+                <div v-html="CodigoDiv"></div>    
             </div>
             
         </div>      
