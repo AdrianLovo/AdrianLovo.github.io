@@ -18,7 +18,7 @@ var vm = new Vue({
 		Tecnologias: [
 			{id: 0, nombre: 'SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'},
 			{id: 1, nombre: 'Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
-			{id: 2, nombre: 'Vue.js', entradas: 1, imagen: 'Resources/img/Lenguajes/vuejs.png'}
+			{id: 2, nombre: 'Vue.js', entradas: 2, imagen: 'Resources/img/Lenguajes/vuejs.png'}
 		],
 
 		ItemSql: [
@@ -40,6 +40,7 @@ var vm = new Vue({
 
 		ItemVue: [
 			{id: 0, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Instanciar Vue.js'},
+			{id: 1, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Metodos'},
 		],
 
 		CodeSql: [
@@ -56,7 +57,7 @@ var vm = new Vue({
       ],
 
       CodeVue:[
-      	{codigo: "<pre class='language-js'> <span class='token keyword'>var </span>vm<span class='token tag'> = new</span> Vue({		//Instancia de Vue <br><br> &nbsp;&nbsp;&nbsp;&nbsp;el: <span class='token function'>'#selector'</span>, 	//Selector al que se enlazara la instancia Vue, no puede enlazarse a body ni html <br><br> &nbsp;&nbsp;&nbsp;&nbsp;data: {			//Datos dentro de la instancia<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mensaje:<span class='token boolean'> 'Esto es un string',</span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numero: <span class='token boolean'>2</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booleano: <span class='token function'>true</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unArray: [],<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unObjeto: {nombre: <span class='token function'>'Adrian'</span>, apellido:<span class='token function'> 'Castillo'</span>}<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> })<br>//Vue es totalmente reactivo por lo que se pueden ralizar asignaciones como vm.numero= 100 en consola<br> </pre> <pre class='language-html'><br> <<span class='token tag'>div </span><span class='token string'>id</span>=<span class='token function'>'selector'</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<<span class='token tag'>div</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.mensaje}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.numero}} <<span class='token tag'>br</span>><br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.booleano}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unArray}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unObjeto}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<span class='token tag'><span class='token punctuation'>&lt;/</span>div</span><br> <span class='token tag'><span class='token punctuation'>&lt;/</span>div</span>"},
+      	{codigo: "<pre class='language-js'> <span class='token keyword'>var </span>vm<span class='token tag'> = new</span> Vue({		//Instancia de Vue <br><br> &nbsp;&nbsp;&nbsp;&nbsp;el: <span class='token function'>'#selector'</span>, 	//Selector al que se enlazara la instancia Vue, no puede enlazarse a body ni html <br><br> &nbsp;&nbsp;&nbsp;&nbsp;data: {			//Datos dentro de la instancia<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mensaje:<span class='token boolean'> 'Esto es un string',</span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numero: <span class='token boolean'>2</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booleano: <span class='token function'>true</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unArray: [],<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unObjeto: {nombre: <span class='token function'>'Adrian'</span>, apellido:<span class='token function'> 'Castillo'</span>}<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> })<br>//Vue es totalmente reactivo por lo que se pueden ralizar asignaciones como vm.numero= 100 en consola<br> </pre> <pre class='language-html'><br> <<span class='token tag'>div </span><span class='token string'>id</span>=<span class='token function'>'selector'</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<<span class='token tag'>div</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.mensaje}} <<span class='token tag'>p</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.numero}} <<span class='token tag'>br</span>><br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{{$data.booleano}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unArray}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unObjeto}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<span class='token tag'><span class='token punctuation'>&lt;/</span>div</span><br> <span class='token tag'><span class='token punctuation'>&lt;/</span>div</span>"},
       ]
 
 	},
