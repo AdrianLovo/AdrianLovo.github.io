@@ -1,18 +1,3 @@
-/* ==========================================================================
-   Author's Adrian 
-   ========================================================================== */
-footer{
-    height: 10%;
-    background-color: white;
-    margin-top:35px;
-    color: black; 
-    font-weight: 800;
-    font-size: 17px;
-    letter-spacing: 2px;
-    text-align: center;
-    padding-top: 20px;
-}
-
 td, tr{
     margin-right: 10px;
 }
@@ -108,7 +93,6 @@ header nav ul li{
 }
 
 header nav ul li a{
-	color:#fff;
 	padding:20px;
 	display: block;
 	text-decoration: none;
@@ -160,5 +144,10 @@ header nav ul li a:hover{
 		float: right;
 		font-size: 40px;
 	}
+}
+
+nav ul li a{
+	text-decoration: none !important;
+	color: white !important;
 }
 
