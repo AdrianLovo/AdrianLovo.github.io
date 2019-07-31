@@ -10,7 +10,6 @@
         <title>Adrian Humberto Castillo Lovo</title>
         <link rel="shortcut icon" href="Resources/img/favicon.ico">
       
-        <link rel="stylesheet" href="Resources/css/estilos.css">
         <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">
         <link rel="stylesheet" type="text/css" href="Resources/css/menu.css">
         <link rel="stylesheet" href="Resources/css/bootstrap.min.css">      
@@ -18,6 +17,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         <script src="Resources/js/vue.js"></script>
+        <link rel="stylesheet" href="Resources/css/balloon.min.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
@@ -42,22 +45,22 @@
                     <nav>
                         <ul>  
                             <li>
-                                <a style="text-decoration: none; color: white" href="index.html"><span class="icon-home"></span> Inicio</a>
+                                <a href="index.html"><span class="icon-home"></span> Inicio</a>
                             </li>                                                                           
                             <li>
-                                <a style="text-decoration: none; color: white" data-toggle="modal" data-target="#ModalDatos"><span class="icon-user"></span>Datos personales</a>
+                                <a data-toggle="modal" data-target="#ModalDatos"><span class="icon-user"></span>Datos personales</a>
                             </li>                            
                             <li>
-                                <a style="text-decoration: none; color: white" href="https://github.com/AdrianLovo/"><span class="icon-github"></span> GitHub</a>
+                                <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span> GitHub</a>
                             </li>                        
                             <li>
-                                <a style="text-decoration: none; color: white" href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span> Contactar</a>
+                                <a href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span> Contactar</a>
                             </li>
                             <li>
-                                <a style="text-decoration: none; color: white" href="Guia.html" title="Guias y Codigo"><span class="icon-embed"></span> Guias y Codigo</a>
+                                <a href="Guia.html" title="Guias y Codigo"><span class="icon-embed"></span> Guias y Codigo</a>
                             </li>
                             <li>
-                                <a style="text-decoration: none; color: white" href="" title="Sobre libros leidos"><span class="icon-book"></span> Sobre Libros</a>
+                                <a href="" title="Sobre libros leidos"><span class="icon-book"></span> Sobre Libros</a>
                             </li>                                      
                         </ul>
                     </nav>
@@ -107,33 +110,25 @@
     
 
         <div class="container">
-            <h1 class="lead" style="margin-top:75px">•Guias y Codigo</h1>
+            <h1 class="lead" style="margin-top:75px">Sobre Libros</h1>
         </div>
 
-        <div id="Catalogo" class="container">
-            
-            <div class="flip-card">
-              <div class="flip-card-inner" >
-                <div class="flip-card-front" v-for="libro in libros">
-                  <img :src="libro.imagen" alt="" style="width:200px;height:300px;"/>                  
-                </div>
-                <!--<div class="flip-card-back">
-                  <h1>1984</h1> 
-                  <p>George Orwell</p> 
-                  <p>978-8490328248</p>
-                </div>-->
-              </div>
-            </div>
-
+        <div class="container">
+            <main class="animated bounceInLeft">           
+                <ul>            
+                    <li v-for="libro in listado" class="caratula">
+                        <a data-balloon-length="large" aria-label="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up"><img :src="libro.imagen" >
+                        {{libro.titulo}}
+                        </a>
+                    </li>                   
+                </ul> 
+            </main>       
         </div>
-        
-                     
+
 
         <script src="Resources/js/vendor/modernizr-2.8.3.min.js"></script>               
-        <script src="Resources/js/index.js"></script>  
-        <script src="Resources/js/Libros.js"></script> 
-        
+        <script src="Resources/js/Menu.js"></script> 
+        <script src="Resources/js/Libros.js"></script>
 
-       
     </body>
 </html>
