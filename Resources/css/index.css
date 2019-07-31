@@ -1,0 +1,33 @@
+/*Definir el Progeso de Barras de porcetaje aprendido*/
+.VB{
+	width: 30% !important;
+}
+.C{
+	width: 40% !important;
+}
+.CSS3{
+	width: 40% !important;
+}
+.JavaEE{
+	width: 50% !important;
+}
+.Jquery{
+	width: 50% !important;
+}
+.JavaScript{
+	width: 50% !important;
+}
+.HTML5{
+	width: 65% !important;
+}
+.PHP{
+	width: 65% !important;
+}
+.SQL{
+	width: 65% !important;
+}
+
+ul li a{
+	text-decoration: none !important;
+	color: white !important;
+}

@@ -12,7 +12,7 @@
       
         <link rel="stylesheet" href="Resources/css/estilos.css">
         <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">
-        <link rel="stylesheet" type="text/css" href="Resources/css/menu.css">
+        <link rel="stylesheet" type="text/css" href="Resources/css/Menu.css">
         <link rel="stylesheet" href="Resources/css/bootstrap.min.css">      
         <link rel="stylesheet" href="Resources/css/Libros.css">    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -109,12 +109,29 @@
         <div class="container">
             <h1 class="lead" style="margin-top:75px">•Guias y Codigo</h1>
         </div>
+
+        <div id="Catalogo" class="container">
+            
+            <div class="flip-card">
+              <div class="flip-card-inner" >
+                <div class="flip-card-front" v-for="libro in libros">
+                  <img :src="libro.imagen" alt="" style="width:200px;height:300px;"/>                  
+                </div>
+                <!--<div class="flip-card-back">
+                  <h1>1984</h1> 
+                  <p>George Orwell</p> 
+                  <p>978-8490328248</p>
+                </div>-->
+              </div>
+            </div>
+
+        </div>
         
                      
 
         <script src="Resources/js/vendor/modernizr-2.8.3.min.js"></script>               
         <script src="Resources/js/index.js"></script>  
-        <script src="Resources/Libros.js"></script> 
+        <script src="Resources/js/Libros.js"></script> 
         
 
        
