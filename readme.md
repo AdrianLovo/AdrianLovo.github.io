@@ -7,6 +7,7 @@
 
 ## Librerias y Frameworks Utilizados
 	- Boostrap 
+	- Vue.js
 	- Jquery
 	- Modernizr
 	- Normalize
