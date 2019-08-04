@@ -8,7 +8,7 @@ var vm = new Vue({
 			{nombre: 'Ensamble de Computadoras', lugar: 'ITCA, Santa Tecla. 2011 (Noviembre)'},
 		],
 		Lenguajes: [
-			{nombre: 'Vue.Js', clase: 'progress-bar Vue', id:'Barra1', estilo: 'width: 20% !important;'},
+			{nombre: 'Vue.Js', clase: 'progress-bar Vue', id:'Barra1', estilo: 'width: 30% !important;'},
 			{nombre: 'VisualBasic', clase: 'progress-bar VB', id:'Barra2', estilo: 'width: 30% !important;'},
 			{nombre: 'C', clase: 'progress-bar C', id:'Barra3', estilo: 'width: 40% !important;'},
 			{nombre: 'CSS3', clase: 'progress-bar CSS3', id:'Barra4', estilo: 'width: 40% !important;'},
