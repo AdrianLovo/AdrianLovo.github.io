@@ -146,7 +146,7 @@
 
                     <ul v-if="ListaVue === true"  class="list-group" v-show="ListaVue">
                         <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>
-                        <li v-for="item in ItemVue" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(2, item.id)">
+                        <li v-for="item in ItemVue" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(2, item.id, item.titulo)">
                             <a class="TextoModal">
                             <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
                             </a>
@@ -177,15 +177,19 @@
                                 </div>
                             </div>                  
                         </div>
-                    </div>    
+                    </div> 
+
+                    <!-- Div Codigo -->
+                    <div v-show="DivMostrar">
+                        <button @click="RegresarLista()" type="button" class="btn btn-default">Regresar</button>
+                        <center><h2>{{$data.TituloDiv}}</h2></center>
+                        <div v-html="CodigoDiv"></div>    
+                    </div>   
 
                 </div>
             </div>
 
-            <div v-show="DivMostrar">
-                <center><h2>Codigo JS | HTML</h2></center>
-                <div v-html="CodigoDiv"></div>    
-            </div>
+            
             
         </div>      
 

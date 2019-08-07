@@ -15,6 +15,8 @@ var vm = new Vue({
 		TituloDiv: '',
 		CodigoDiv: '',
 
+		ValorListaAnterior: -1,
+
 		Tecnologias: [
 			{id: 0, nombre: 'SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'},
 			{id: 1, nombre: 'Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
@@ -69,16 +71,24 @@ var vm = new Vue({
 				case 0: 
 					this.ListaUno = false;
 					this.ListaSql = true;
+					this.ValorListaAnterior=0;
 					break;
 				case 1: 
 					this.ListaUno = false;
 					this.ListaGit = true;
+					this.ValorListaAnterior=1;
 					break;
 				case 2: 
 					this.ListaUno = false;
 					this.ListaVue = true;
+					this.ValorListaAnterior=2;
 					break;
 			}				
+		},
+
+		RegresarLista: function(){
+			this.DivMostrar = false;
+			this.MostrarLista(this.ValorListaAnterior);
 		},
 
 		MostrarTituloUno: function(){
@@ -89,7 +99,7 @@ var vm = new Vue({
 			this.DivMostrar = false;			
 		},
 
-		MostrarCodigo: function(tecnologia, id){
+		MostrarCodigo: function(tecnologia, id, titulo){
 			switch (tecnologia){
 				case 0: 
 					this.TituloModal = this.Tecnologias[tecnologia].nombre;
@@ -102,8 +112,9 @@ var vm = new Vue({
 					this.ModalMostra = true;
 					break;
 				case 2: 
+					this.ListaVue = false;
 					this.DivMostrar = true;
-					this.TituloDiv = this.Tecnologias[tecnologia].nombre;
+					this.TituloDiv = titulo;
 					this.CodigoDiv = this.CodeVue[id].codigo;
 					break;
 			}	
@@ -112,7 +123,7 @@ var vm = new Vue({
 
 		CerrarModal: function(){
 			this.ModalMostra = false;
-		}
+		},
 
 
 	}
