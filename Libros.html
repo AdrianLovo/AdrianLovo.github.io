@@ -104,7 +104,7 @@
                         </div>
               
                     </div>
-                </div>               
+                </div>                 
             </div>
         </header>
     
@@ -117,7 +117,7 @@
             <main class="animated bounceInLeft">           
                 <ul>            
                     <li v-for="libro in listado" class="caratula">
-                        <a data-balloon-length="large" aria-label="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up"><img :src="libro.imagen" >
+                        <a :title="libro.frase"><img :src="libro.imagen" >
                         {{libro.titulo}}
                         </a>
                     </li>                   

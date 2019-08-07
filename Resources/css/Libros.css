@@ -30,7 +30,7 @@ ul {
   background-color: #fefefe;
   animation: entrada .5s;
 }
-img { 
+ul li a img { 
   width: 210px; 
   height: auto; 
   background-color: #ccc; 
