@@ -121,19 +121,19 @@
                         
                         <li v-for="tecnologias in Tecnologias" class="list-group-item TituloGuia" @click="MostrarLista(tecnologias.id)">
                             <span class="badge">{{tecnologias.entradas}}  </span>                           
-                            <img :src="tecnologias.imagen" width="25px" height="25px"><b>{{tecnologias.nombre}}</b>                                      
+                            <img :src="tecnologias.imagen" width="25px" height="25px"><b>{{ tecnologias.nombre}}</b>                                      
                         </li>                
 
-                    </ul>                                        
+                    </ul>    
 
-                    <ul v-if="ListaSql === true" class="list-group" v-show="ListaSql">
-                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>                        
-                        <li v-for="item in ItemSql" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(0, item.id)">
+                    <ul v-if="ListaVue === true"  class="list-group" v-show="ListaVue">
+                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>
+                        <li v-for="item in ItemVue" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(0, item.id, item.titulo)">
                             <a class="TextoModal">
                             <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
                             </a>
-                        </li>  
-                    </ul>
+                        </li> 
+                    </ul>  
 
                     <ul v-if="ListaGit === true" class="list-group" v-show="ListaGit">
                         <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button> 
@@ -142,16 +142,25 @@
                             <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
                             </a>
                         </li>                                                        
-                    </ul>
+                    </ul> 
 
-                    <ul v-if="ListaVue === true"  class="list-group" v-show="ListaVue">
+                    <ul v-if="ListaLinux === true"  class="list-group" v-show="ListaLinux">
                         <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>
-                        <li v-for="item in ItemVue" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(2, item.id, item.titulo)">
+                        <li v-for="item in ItemLinux" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(2, item.id, item.titulo)">
                             <a class="TextoModal">
                             <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
                             </a>
                         </li> 
-                    </ul>
+                    </ul>                                 
+
+                    <ul v-if="ListaSql === true" class="list-group" v-show="ListaSql">
+                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>                        
+                        <li v-for="item in ItemSql" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(3, item.id)">
+                            <a class="TextoModal">
+                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
+                            </a>
+                        </li>  
+                    </ul>                   
 
 
                     <!-- Modal Datos -->
