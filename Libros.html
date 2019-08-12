@@ -117,7 +117,7 @@
             <main class="animated bounceInLeft">           
                 <ul>            
                     <li v-for="libro in listado" class="caratula">
-                        <a :title="libro.frase"><img :src="libro.imagen" >
+                        <a :title="libro.frase"><img :src="libro.imagen"  style="max-height: 200; max-width: 350">
                         {{libro.titulo}}
                         </a>
                     </li>                   
