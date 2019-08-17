@@ -113,15 +113,15 @@
             <h1 class="lead" style="margin-top:75px">Sobre Libros</h1>
         </div>
 
-        <div class="container">
-            <main class="animated bounceInLeft">           
+        <div>
+            <main style="margin-left: 50px">           
                 <ul>            
                     <li v-for="libro in listado" class="caratula">
                         <a :title="libro.frase"><img :src="libro.imagen"  style="max-height: 200; max-width: 350">
                         {{libro.titulo}}
                         </a>
                     </li>                   
-                </ul> 
+                </ul>                
             </main>       
         </div>
 
