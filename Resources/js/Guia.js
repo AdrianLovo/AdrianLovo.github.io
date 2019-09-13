@@ -19,17 +19,17 @@ var vm = new Vue({
 		ValorListaAnterior: -1,
 
 		Tecnologias: [
-			{id: 0, nombre: 'Vue.js', entradas: 3, imagen: 'Resources/img/Lenguajes/vuejs.png'},
-			{id: 1, nombre: 'Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
-			{id: 2, nombre: 'Linux Comandos Basicos', entradas: 7, imagen: 'Resources/img/Lenguajes/Linux.png'},
-			{id: 3, nombre: 'SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'}
+			{id: 0, nombre: ' Vue.js', entradas: 3, imagen: 'Resources/img/Lenguajes/vuejs.png'},
+			{id: 1, nombre: ' Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
+			{id: 2, nombre: ' Linux Comandos Basicos', entradas: 7, imagen: 'Resources/img/Lenguajes/Linux.png'},
+			{id: 3, nombre: ' SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'}
 		],
 
 
 		ItemVue: [
-			{id: 0, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Instanciar Vue.js'},
-			{id: 1, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Metodos'},
-			{id: 2, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-model'},
+			{id: 0, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Instanciar Vue.js', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/01-Instancia%20Vue'},
+			{id: 1, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Metodos', enlace: ''},
+			{id: 2, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-model', enlace: ''},
 		],
 
 		ItemGit: [
@@ -58,12 +58,6 @@ var vm = new Vue({
 			{id: 9, imagen: 'Resources/img/Lenguajes/SQL.png', titulo: 'HAVING'}
 		],
 
-
-		CodeVue:[
-      		{codigo: "<pre class='language-js'> <span class='token keyword'>var </span>vm<span class='token tag'> = new</span> Vue({		//Instancia de Vue <br><br> &nbsp;&nbsp;&nbsp;&nbsp;el: <span class='token function'>'#selector'</span>, 	//Selector al que se enlazara la instancia Vue, no puede enlazarse a body ni html <br><br> &nbsp;&nbsp;&nbsp;&nbsp;data: {			//Datos dentro de la instancia<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mensaje:<span class='token boolean'> 'Esto es un string',</span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numero: <span class='token boolean'>2</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;booleano: <span class='token function'>true</span>,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unArray: [],<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unObjeto: {nombre: <span class='token function'>'Adrian'</span>, apellido:<span class='token function'> 'Castillo'</span>}<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> })<br>//Vue es totalmente reactivo por lo que se pueden ralizar asignaciones como vm.numero= 100 en consola<br> </pre> <pre class='language-html'><br> <<span class='token tag'>div </span><span class='token string'>id</span>=<span class='token function'>'selector'</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<<span class='token tag'>div</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.mensaje}} <<span class='token tag'>p</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.numero}} <<span class='token tag'>br</span>><br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{{$data.booleano}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unArray}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$data.unObjeto}} <<span class='token tag'>br</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<span class='token tag'><span class='token punctuation'>&lt;/</span>div</span><br> <span class='token tag'><span class='token punctuation'>&lt;/</span>div</span>"},
-      		{codigo: "<pre class='language-js'> <br> <span class='token keyword'>var </span>vm = <span class='token tag'>new </span>Vue({&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> &nbsp;&nbsp;&nbsp;&nbsp;el: <span class='token function'>'main', </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> &nbsp;&nbsp;&nbsp;&nbsp;data: {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mensaje: <span class='token function'>'Pulsa para obtener la segunda parte del mensaje'</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> &nbsp;&nbsp;&nbsp;&nbsp;},<br> &nbsp;&nbsp;&nbsp;&nbsp;methods: {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='token string'>nuevoMensaje</span>: <span class='token keyword'>function</span>(){<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class='token function'>this</span>.mensaje <span class='token tag'>=</span> <span class='token function'>'Segundo mensaje enviado a Vue'</span>;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br> &nbsp;&nbsp;&nbsp;&nbsp;}<br> })<br> <br> </pre> <pre class='language-html'> <br> <<span class='token tag'>main</span>><br> &nbsp;&nbsp;&nbsp;&nbsp;<<span class='token tag'>p</span> <span class='token string'>v-on:click</span>=<span class='token function'>'nuevoMensaje()'</span>> {{$data.mensaje}} </<span class='token tag'><span class='token tag'><span class='token punctuation'>&lt;/</span>p</span>>&nbsp;&nbsp;&nbsp;&nbsp;<br> &nbsp;&nbsp;&nbsp;&nbsp;<<span class='token tag'>p</span>>{{$data}}</<span class='token tag'><span class='token tag'><span class='token punctuation'>&lt;/</span>p</span>><br> </<span class='token tag'><span class='token tag'><span class='token punctuation'>&lt;/</span>main</span>><br> </pre>"},
-      		{codigo: "<pre class='language-html'> <br> <<span class='token tag'>main</span>><br> &nbsp;&nbsp;&nbsp;&nbsp<<span class='token tag'>input </span><span class='token function'>v-model</span>='<span class='token string'>mensaje</span>'><br> &nbsp;&nbsp;&nbsp;&nbsp<<span class='token tag'>p</span>> {{mensaje}} </<span class='token tag'><span class='token tag'><span class='token punctuation'>&lt;/</span>p</span>><br> </<span class='token tag'><span class='token tag'><span class='token punctuation'>&lt;/</span>main</span>><br> </pre>   <pre class='language-js'> <br> <span class='token keyword'>var </span>vm = <span class='token tag'>new </span>Vue({<br> &nbsp;&nbsp;&nbsp;&nbspel: <span class='token function'>'main'</span>,<br> &nbsp;&nbsp;&nbsp;&nbspdata:{<br> &nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbspmensaje: <span class='token function'>'Cambia este mensaje'</span><br> &nbsp;&nbsp;&nbsp;&nbsp}<br> })<br> </pre>"},
-      	],
 
 		CodeSql: [
 	        {codigo: "<pre class='language-sql'><span class='token function'>SELECT, DISTINCT y ORDER BY</span><br><br> <span class='token keyword'>SELECT</span> * <span class='token keyword'>FROM</span> <span class='token string'>actor</span>;<br> <span class='token keyword'>SELECT</span> actor_id, first_name, last_name, last_update  <span class='token keyword'>FROM</span> <span class='token string'>actor</span>;<br> <span class='token keyword'>SELECT</span> actor_id, first_name as Nombre, last_name AS Apellido  <span class='token keyword'>FROM</span> <span class='token string'>actor</span>;<br> <span class='token keyword'>SELECT DISTINCT</span>(store_id) <span class='token keyword'>FROM</span> <span class='token string'>customer</span>;<br> <span class='token keyword'>SELECT</span> * <span class='token keyword'>FROM</span> <span class='token string'>country</span> <span class='token keyword'>ORDER BY</span> country <span class='token keyword'>ASC</span>;<br> </pre>"},
@@ -139,11 +133,7 @@ var vm = new Vue({
 			console.log(tecnologia +"   "  + id + "   "+ titulo);
 
 			switch (tecnologia){
-				case 0: 
-					this.ListaVue = false;
-					this.DivMostrar = true;
-					this.TituloDiv = titulo;
-					this.CodigoDiv = this.CodeVue[id].codigo;					
+				case 0: 	//Vue.js							
 					break;
 				case 1: 
 					this.TituloModal = this.Tecnologias[tecnologia].nombre;

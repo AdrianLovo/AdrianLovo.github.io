@@ -129,7 +129,7 @@
                     <ul v-if="ListaVue === true"  class="list-group" v-show="ListaVue">
                         <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>
                         <li v-for="item in ItemVue" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(0, item.id, item.titulo)">
-                            <a class="TextoModal">
+                            <a class="TextoModal" :href="item.enlace" target="_blank">
                             <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
                             </a>
                         </li> 
