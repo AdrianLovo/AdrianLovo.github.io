@@ -28,7 +28,7 @@ var vm = new Vue({
 
 		ItemVue: [
 			{id: 0, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Instanciar Vue.js', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/01-Instancia%20Vue'},
-			{id: 1, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Metodos', enlace: ''},
+			{id: 1, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Metodos', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/02-Metodos%20Vue'},
 			{id: 2, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-model', enlace: ''},
 		],
 
