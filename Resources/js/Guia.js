@@ -19,7 +19,7 @@ var vm = new Vue({
 		ValorListaAnterior: -1,
 
 		Tecnologias: [
-			{id: 0, nombre: ' Vue.js', entradas: 3, imagen: 'Resources/img/Lenguajes/vuejs.png'},
+			{id: 0, nombre: ' Vue.js', entradas: 8, imagen: 'Resources/img/Lenguajes/vuejs.png'},
 			{id: 1, nombre: ' Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
 			{id: 2, nombre: ' Linux Comandos Basicos', entradas: 7, imagen: 'Resources/img/Lenguajes/Linux.png'},
 			{id: 3, nombre: ' SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'}
@@ -29,7 +29,12 @@ var vm = new Vue({
 		ItemVue: [
 			{id: 0, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Instanciar Vue.js', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/01-Instancia%20Vue'},
 			{id: 1, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Metodos', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/02-Metodos%20Vue'},
-			{id: 2, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-model', enlace: ''},
+			{id: 2, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-show', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/03-Directiva%20v-show'},
+			{id: 3, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-if v-else', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/04-Directiva%20v-if%20v-else'},
+			{id: 4, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-else-if', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/05-Directiva%20v-if-else-if'},
+			{id: 5, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-for', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/06-Directiva%20v-for'},
+			{id: 6, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-text v-html', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/07-Directiva%20v-text%20v-html'},
+			{id: 7, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-bind', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/08-Directiva%20v-bind'},
 		],
 
 		ItemGit: [
