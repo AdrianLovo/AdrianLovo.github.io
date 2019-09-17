@@ -19,7 +19,7 @@ var vm = new Vue({
 		ValorListaAnterior: -1,
 
 		Tecnologias: [
-			{id: 0, nombre: ' Vue.js', entradas: 8, imagen: 'Resources/img/Lenguajes/vuejs.png'},
+			{id: 0, nombre: ' Vue.js', entradas: 15, imagen: 'Resources/img/Lenguajes/vuejs.png'},
 			{id: 1, nombre: ' Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
 			{id: 2, nombre: ' Linux Comandos Basicos', entradas: 7, imagen: 'Resources/img/Lenguajes/Linux.png'},
 			{id: 3, nombre: ' SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'}
@@ -35,6 +35,13 @@ var vm = new Vue({
 			{id: 5, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-for', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/06-Directiva%20v-for'},
 			{id: 6, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-text v-html', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/07-Directiva%20v-text%20v-html'},
 			{id: 7, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva v-bind', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/08-Directiva%20v-bind'},
+			{id: 8, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Componentes', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/09-Componentes'},
+			{id: 9, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Componentes . Props', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/10-Componentes%20.%20Props'},
+			{id: 10, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Transiciones', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/11-Transiciones'},
+			{id: 11, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Filtros', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/12-Filtros'},
+			{id: 12, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Tareas Computadas', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/13-Tareas%20Computadas'},
+			{id: 13, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Vue con AJAX', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/14-Vue%20con%20AJAX'},
+			{id: 14, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Vue Cli', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/15-Vue%20Cli'},
 		],
 
 		ItemGit: [
