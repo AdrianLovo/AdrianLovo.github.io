@@ -19,7 +19,7 @@ var vm = new Vue({
 		ValorListaAnterior: -1,
 
 		Tecnologias: [
-			{id: 0, nombre: ' Vue.js', entradas: 15, imagen: 'Resources/img/Lenguajes/vuejs.png'},
+			{id: 0, nombre: ' Vue.js', entradas: 18, imagen: 'Resources/img/Lenguajes/vuejs.png'},
 			{id: 1, nombre: ' Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
 			{id: 2, nombre: ' Linux Comandos Basicos', entradas: 7, imagen: 'Resources/img/Lenguajes/Linux.png'},
 			{id: 3, nombre: ' SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'}
@@ -42,6 +42,9 @@ var vm = new Vue({
 			{id: 12, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Tareas Computadas', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/13-Tareas%20Computadas'},
 			{id: 13, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Vue con AJAX', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/14-Vue%20con%20AJAX'},
 			{id: 14, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Vue Cli', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/15-Vue%20Cli'},
+			{id: 15, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Directiva V-once', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/16-Directiva%20V-once'},
+			{id: 16, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Escuchando Eventos con Vue', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/17-Escuchando%20Eventos%20con%20Vue'},
+			{id: 17, imagen: 'Resources/img/Lenguajes/vuejs.png', titulo: 'Observable', enlace: 'https://github.com/AdrianLovo/NotasCodeVue.js/tree/master/18-Observable'},
 		],
 
 		ItemGit: [
