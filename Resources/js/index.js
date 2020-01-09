@@ -10,6 +10,7 @@ var vm = new Vue({
 		Lenguajes: [
 			{nombre: 'Vue.Js', clase: 'progress-bar Vue', id:'Barra1', estilo: 'width: 30% !important;'},
 			{nombre: 'VisualBasic', clase: 'progress-bar VB', id:'Barra2', estilo: 'width: 30% !important;'},
+			{nombre: 'PHP - Laravel', clase: 'progress-bar laravel', id:'Barra10', estilo: 'width: 35% !important;'},		
 			{nombre: 'C', clase: 'progress-bar C', id:'Barra3', estilo: 'width: 40% !important;'},
 			{nombre: 'CSS3', clase: 'progress-bar CSS3', id:'Barra4', estilo: 'width: 40% !important;'},
 			{nombre: 'JavaEE', clase: 'progress-bar JavaEE', id:'Barra5', estilo: 'width: 50% !important;'},
