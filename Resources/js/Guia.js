@@ -19,10 +19,10 @@ var vm = new Vue({
 		ValorListaAnterior: -1,
 
 		Tecnologias: [
-			{id: 0, nombre: ' Vue.js', entradas: 18, imagen: 'Resources/img/Lenguajes/vuejs.png'},
-			{id: 1, nombre: ' Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.png'},
-			{id: 2, nombre: ' Linux Comandos Basicos', entradas: 7, imagen: 'Resources/img/Lenguajes/Linux.png'},
-			{id: 3, nombre: ' SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.png'}
+			{id: 0, nombre: ' Vue.js', entradas: 18, imagen: 'Resources/img/Lenguajes/vuejs.webp'},
+			{id: 1, nombre: ' Git / GitHub', entradas: 0, imagen: 'Resources/img/Lenguajes/Git.webp'},
+			{id: 2, nombre: ' Linux Comandos Basicos', entradas: 7, imagen: 'Resources/img/Lenguajes/Linux.webp'},
+			{id: 3, nombre: ' SQL (Structured Query Language)', entradas: 10, imagen: 'Resources/img/Lenguajes/SQL.webp'}
 		],
 
 
