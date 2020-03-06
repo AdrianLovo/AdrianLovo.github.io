@@ -1,7 +1,8 @@
 .footer{
 	background-color: #286090;
 	color: white;
-	text-align: center;
+  text-align: center;
+  position: inherit;
 }
 
 html {
