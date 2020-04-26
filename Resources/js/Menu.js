@@ -1,6 +1,7 @@
 $(document).ready(function(){
  	Menu();
  	Barras();
+
  });
 
 var contador = 1;
@@ -30,3 +31,4 @@ function Barras(){
         });
     }
 }
+
