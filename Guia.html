@@ -30,7 +30,7 @@
                         <ul>  
                             <li>
                                 <a href="index.html"><span class="icon-home"></span> Inicio</a>
-                            </li>                                                                          	
+                            </li>                                                                           
                             <li>
                                 <a data-toggle="modal" data-target="#ModalDatos"><span class="icon-user"></span>Datos personales</a>
                             </li>                            
@@ -52,7 +52,7 @@
     
 
         <div class="container">
-            <h1 class="lead" style="margin-top:75px">•Guias y Codigo</h1>
+            <h1 class="lead">Guias y Codigo</h1>
         </div>
         
         <div id="PanelPrincipal" class="container">
@@ -145,44 +145,57 @@
         </div>  
 
         <!-- Modal Datos Personales-->
-        <div class="modal fade" id="ModalDatos" role="dialog">
-            <div class="modal-dialog">
+    <div class="modal fade" id="ModalDatos" role="dialog">
+        <div class="modal-dialog">
 
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <center>
-                            <h4 class="modal-title">Datos Personales</h4>
-                        </center>
-                    </div>
-                
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4" style="margin-top: 10px; margin-bottom: 10px">
-                    <img src="Resources/img/Foto.webp" class="fotoPerfil efectofotoPerfil">        
-                    </div>
-
-                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2" style="margin-bottom: 10px; margin-top: 10px">
-                        <table>
-                            <tr><td class="resaltado"><b>Nombre:</b> Adrián Humberto Castillo Lovo</td></tr>
-                            <tr><td class="resaltado"><b>Edad:</b> 27 Años</td></tr>
-                            <tr><td class="resaltado"><b>Teléfono:</b> 7117-3697</td></tr>       
-                            <tr><td class="resaltado"><b>Profesion:</b> Estudiante</td></tr>       
-                            <tr><td class="resaltado"><b>Domicilio:</b> San Salvador</td></tr>
-                            <tr><td class="resaltado"><b>Estado civil:</b> Soltero</td></tr>
-                            <tr><td class="resaltado"><b>Email:</b> adrianhumbertocastillo@gmail.com</td></tr>
-                            <tr>
-                                <td> 
-                                    <p>
-                                        <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>  
-                                    </p>                                          
-                                </td>
-                            </tr>
-                        </table>
-                    </div>    
-                    <div class="modal-footer">
-                    </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <h4 class="modal-title">Datos Personales</h4>
+                    </center>
                 </div>
-      
-            </div>
-        </div> 
+            
+                <table>
+                    <tr>
+                        <td>
+                            <img src="Resources/img/Foto.webp" class="fotoPerfil">   
+                        </td>
+                        <td>
+                            <table>
+                                <tr><td class="resaltado"><b>Nombre:</b> Adrián Humberto Castillo Lovo</td></tr>
+                                <tr><td class="resaltado"><b>Edad:</b> 27 Años</td></tr>
+                                <tr><td class="resaltado"><b>Teléfono:</b> 7117-3697</td></tr>       
+                                <tr><td class="resaltado"><b>Profesion:</b> Estudiante/Programador</td></tr>       
+                                <tr><td class="resaltado"><b>Domicilio:</b> San Salvador</td></tr>
+                                <tr><td class="resaltado"><b>Estado civil:</b> Soltero</td></tr>
+                                <tr><td class="resaltado"><b>Email:</b> adrianhumbertocastillo@gmail.com</td></tr>
+                                <tr>
+                                    <td>
+                                        <center>
+                                            <a href="https://www.facebook.com/adrian.humberto.12" target="_blank">
+                                                <img class="imgRedes" src="Resources/img/Redes/facebook.ico" alt="adrian.humberto.12" >
+                                            </a>
+                                            <a href="https://www.instagram.com/adrianhumbertcastillo/" target="_blank">
+                                                <img class="imgRedes" src="Resources/img/Redes/instagram.ico" alt="adrianhumbertcastillo">
+                                            </a>
+                                            <a href="https://acastillo20.blogspot.com/" target="_blank">
+                                                <img class="imgRedes" src="Resources/img/Redes/blog.ico" alt="acastillo20.blogspot.com">
+                                            </a>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>                  
+                </table>
+
+                <div class="modal-footer">
+                    <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>  
+                </div>
+            </div>      
+
+        </div>
+    </div> 
 
         <!-- Cotenido Header para evitar retraso de "About default"-->
         <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">    
@@ -194,7 +207,6 @@
         <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         <!------------------------------------------------------------>             
 
-        <script async src="Resources/js/vendor/modernizr-2.8.3.min.js"></script>               
         <script async src="Resources/js/Menu.min.js"></script>   
         <script async src="Resources/prism/prism.js"></script>  
         <script async src="Resources/js/Guia.min.js"></script> 
