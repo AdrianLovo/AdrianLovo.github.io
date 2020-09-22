@@ -22,7 +22,7 @@
             <nav>
                 <ul>                    	
                     <li>
-                        <a data-toggle="modal" data-target="#ModalDatos"><span class="icon-user"></span>Datos personales</a>
+                        <a href="#"><span class="icon-checkmark"></span>Portafolio</a>
                     </li>                            
                     <li>
                         <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
@@ -39,128 +39,100 @@
     </header>    
 
     <div class="container">
-        <h1 class="lead">•Formación •Habilidades•Experiencia
-        </h1>
+        <h1 class="lead"></h1>
     </div>
     
-    <div class="row-fluid" style="margin-bottom: 30px;">
-        <img src="Resources/img/Img1.webp" class="foto">
-    </div>
-
-    <div id="Principal">
+    <div id="Principal" class="container">
         
-        <div id="Formacion" class="container">
-            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                <b>Grado Académico</b><br>
-                Lic. en ciencias de la Computación (4 Años cursados)
-            </div>
-            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                <b>Lugar de estudio</b><br>
-                Universidad Centroamericana “José Simeón Cañas”
-            </div>
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                <b>Periodo</b><br>
-                2010-2016
-            </div>
-
-            <!-- Modal Otros cursos -->
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <p><center>
+        <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 hidden-xs centrado">
+                <img src="Resources/img/Foto.webp" class="fotoPerfil">                
+            </div>    
+            <div id="Formacion" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 marco">  
+                <p class="tituloSecundario">Formación</p>  
+                <div class="col-xs-5 hidden-sm hidden-md hidden-lg">
+                    <img src="Resources/img/Foto.webp" class="fotoPerfil">                    
+                </div>        
+                <div class="col-xs-7 col-sm-4 col-md-4 col-lg-4">
+                    <b>Grado Académico</b>
+                    <p>Lic. en ciencias de la Computación<br>
+                    (4 Años cursados)</p>
+                </div>
+                <div class="col-xs-7 col-sm-4 col-md-4 col-lg-4">
+                    <b>Lugar de estudio</b><br>
+                    Universidad Centroamericana <br> “José Simeón Cañas”
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 hidden-xs">
+                    <b>Periodo</b><br>
+                    2010-2016
+                </div>                  
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 boton">
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ModalOtrosCursos">Otros Cursos</button>
-                </center></p>
-
-                <div id="ModalOtrosCursos" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-                       <div class="modal-content">
-                            <div class="modal-header">
-                                <center><h4 class="modal-title">Otros Cursos</h4></center>                              
-                            </div>
-                            <div class="modal-body">
-                                <ul class="list-group">
-                                    <li class="list-group-item" v-for="curso in OtrosCursos"><b>{{curso.nombre}}</b> {{curso.lugar}}</li>
-                                </ul> 
-                                <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>
-                            </div>
-                        </div>     
-                    </div>  
                 </div>
             </div>
         </div>
 
-        <div id="Habilidades" class="container">
-            <!-- Lenguajes de Programacion -->
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                <p><center>
-                    <b>Tecnologias Utilizadas</b>
-                </center></p>
-                
-                <div class="flex-container">
-                    <div v-for="lenguaje in Lenguajes">
-                        <table>
-                            <tr>
-                                <td><img  :src="lenguaje.url" class="imgLenguaje" :alt="lenguaje.nombre" :title="lenguaje.nombre">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><center><p>{{lenguaje.nombre}}</p></center></td>
-                            </tr>
-                        </table>
-                    </div>                        
+       
+        <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 hidden-xs">
+                <div class="marco">
+                    <p class="textoDescriptionNegrita">Adrián Humberto Castillo</p>
+                    <p class="textoDescriptionNormal">Programación | Tecnologia | Libros</p>
+                    <div class="centrado">
+                        <a href="https://www.facebook.com/adrian.humberto.12" target="_blank" class="botonesRedes">
+                            <img class="imgRedes" src="Resources/img/Redes/facebook.ico" alt="adrian.humberto.12" >
+                        </a>
+                        <a href="https://acastillo20.blogspot.com/" target="_blank" class="botonesRedes">
+                            <img class="imgRedes" src="Resources/img/Redes/blog.ico" alt="acastillo20.blogspot.com">
+                        </a>
+                        <a href="https://github.com/AdrianLovo/" target="_blank" class="botonesRedes">
+                            <img class="imgRedes" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo">
+                        </a>
+                    </div> 
                 </div>
-               
-                <p><center>
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ModalOtrosLenguajes">Otros lenguajes</button>
-                </center></p>
-                   
-                <!-- Modal Otros lenguajes de progrmacion-->    
-                <div id="ModalOtrosLenguajes" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <center><h4 class="modal-title">Otros lenguajes de programacion aprendidos en la Universidad</h4></center>
-                            </div>
-                            <div class="modal-body">
-                                <ul class="list-group">
-                                    <li class="list-group-item" v-for="otroLenguaje in OtrosLenguajes">
-                                        <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre" class="imgOtroLenguaje">
-                                        <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}} 
-                                    </li>
-                                    <li class="list-group-item" style="cursor: pointer;">
-                                        <a href="https://platzi.com/@AdrianCas/" style="text-decoration: none" target="_bl">
-                                            <img src="Resources/img/Redes/platzi.webp" class="imgOtroLenguaje">
-                                        <b>Platzi:</b> Listado de cursos realizados</a>
-                                    </li>
-                                </ul> 
+            </div>  
 
-                                <p><center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center></p>
-                            </div>                      
-                        </div>     
-                    </div>  
-                </div>
+            <div id="Habilidades" class="col-xs-12 col-sm-9 col-md-9 col-lg-9  marco">
+            
+                <!-- Lenguajes de Programacion -->
+                <div>
+                    <p class="tituloSecundario">Tecnologias Utilizadas</p>
+                    <div class="flex-container">
+                        <div v-for="lenguaje in Lenguajes">
+                            <table>
+                                <tr>
+                                    <td><img :src="lenguaje.url" class="imgLenguaje" :alt="lenguaje.nombre" :title="lenguaje.nombre">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><center><p>{{lenguaje.nombre}}</p></center></td>
+                                </tr>
+                            </table>
+                        </div>                        
+                    </div>         
+                    <div class="boton">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ModalOtrosLenguajes">Otros lenguajes</button>  
+                    </div>                      
+                </div>                    
+    
             </div>
-
-            <!-- Sobre JavaEE -->
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <p><center>
-                    <b>Sobre JavaEE:</b>
-                </center></p>
-                <p>•<b>JPA</b> (Java Persistence Api) como framework de persistencia para realizar el mapeo de la base de datos.<br></p>
-                <p>•<b>EJB</b> (Enterprise JavaBeans) para la capa de procesos.<br></p>
-                <p>•<b>JSF</b> (Java Server Faces) como framework para la vista utilizando las librerías de <i><b>Primefaces</b></i> para agilizar el desarrollo y mejorar la estética en general.<br></p>
-                <p>•<b>JasperReports</b> Como herramienta para la generación de reportes.<br> </p>
-            </div>           
-
         </div>
+        
 
+        
+
+        <!-- Sobre JavaEE  
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <p><center>
+                <b>Sobre JavaEE:</b>
+            </center></p>
+            <p>•<b>JPA</b> (Java Persistence Api) como framework de persistencia para realizar el mapeo de la base de datos.<br></p>
+            <p>•<b>EJB</b> (Enterprise JavaBeans) para la capa de procesos.<br></p>
+            <p>•<b>JSF</b> (Java Server Faces) como framework para la vista utilizando las librerías de <i><b>Primefaces</b></i> para agilizar el desarrollo y mejorar la estética en general.<br></p>
+            <p>•<b>JasperReports</b> Como herramienta para la generación de reportes.<br> </p>
+        </div>--> 
        
-       
-        <div class="container">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <h2 class="ac title-size">Cualidades<i class="title_line"></i></h2>
-                <div v-for="cualidad in Cualidades">
-                    <span class="icon-checkmark"></span>{{cualidad}} <br>     
-                </div>                                         
-            </div>   
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9  col-sm-offset-3 col-md-offset-3 col-lg-offset-3 marco">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 <h2 class="ac title-size">¿En qué estoy trabajando?<i class="title_line"></i></h2> 
                 <div v-for="trabajo in Trabajo">
@@ -171,76 +143,67 @@
                 <h2 class="ac title-size">Objetivos<i class="title_line"></i></h6>
                 Actualmente mi objetivo principal es encontrar la oportunidad para formar parte del equipo de desarrolladores de una empresa dedicada al mundo de internet en general, para poder seguir evolucionando como profesional, aportando todo el conocimiento y experiencia adquirida para ser un miembro importante.
             </div>         
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <h2 class="ac title-size">Cualidades<i class="title_line"></i></h2>
+                <div v-for="cualidad in Cualidades">
+                    <span class="icon-checkmark"></span>{{cualidad}} <br>     
+                </div>                                         
+            </div>               
         </div> 
+
+        <!-- Modal Otros lenguajes de programacion-->    
+        <div id="ModalOtrosLenguajes" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <center><h4 class="modal-title">Otros lenguajes de programacion aprendidos en la Universidad</h4></center>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item" v-for="otroLenguaje in OtrosLenguajes">
+                                <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre" class="imgOtroLenguaje">
+                                <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}} 
+                            </li>                            
+                        </ul> 
+                        <p><center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center></p>
+                    </div>                      
+                </div>     
+            </div>  
+        </div>
+    
+        <!-- Modal Otros cursos -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            
+
+            <div id="ModalOtrosCursos" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <center><h4 class="modal-title">Otros Cursos</h4></center>                              
+                        </div>
+                        <div class="modal-body">
+                            <ul class="list-group">
+                                <li class="list-group-item" v-for="curso in OtrosCursos"><b>{{curso.nombre}}</b> {{curso.lugar}}</li>
+                                <li class="list-group-item" style="cursor: pointer;">
+                                    <a href="https://platzi.com/@AdrianCas/" style="text-decoration: none" target="_bl">
+                                    <b>Otros cursos online realizados</a></b>
+                                </li>
+                            </ul>                            
+                            <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>
+                        </div>
+                    </div>     
+                </div>  
+            </div>
+        </div>
                
     </div>		 
            
     <footer class="footer">
         <h5>SOBRE ESTA PAGINA</h5>
-        <p>Este sitio web ha sido diseñado y codeado a mano con Sublime Text 3 en HTML5 y CSS3 con el framework Vue.js y Bootstrap.</p>
-        <p>La web se encuentra alojada en un repositorio en GitHub y está diseñada siguiendo las tendencias en diseño web responsive, por tanto se adapta perfectamente a cualquier dispositivo en el que se visualice</p>
+        <p>Este sitio web ha sido diseñado y codeado a mano con VSC en HTML5 y CSS3 con el framework Vue.js y Bootstrap.</p>
+        <p>La web se encuentra alojada en un repositorio en GitHub (GitHubPages) y está diseñada siguiendo las tendencias en diseño web responsive, por tanto se adapta perfectamente a cualquier dispositivo en el que se visualice</p>
     </footer>  
-    
-    
-    <!-- Modal Datos Personales-->
-    <div class="modal fade" id="ModalDatos" role="dialog">
-        <div class="modal-dialog">
 
-            <div class="modal-content">
-                <div class="modal-header">
-                    <center>
-                        <h4 class="modal-title">Datos Personales</h4>
-                    </center>
-                </div>
-            
-                <div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                        <center><img src="Resources/img/Foto.webp" class="fotoPerfil">    </center>
-                    </div>
-                    
-                   
-                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="margin-top: 10px">
-                    <center>
-                    <table>
-                            <tr><td class="resaltado"><b>Nombre:</b> Adrián Humberto Castillo Lovo</td></tr>
-                            <tr><td class="resaltado"><b>Edad:</b> 27 Años</td></tr>
-                            <tr><td class="resaltado"><b>Teléfono:</b> 7117-3697</td></tr>       
-                            <tr><td class="resaltado"><b>Profesion:</b> Estudiante/Programador</td></tr>       
-                            <tr><td class="resaltado"><b>Domicilio:</b> San Salvador</td></tr>
-                            <tr><td class="resaltado"><b>Email:</b> adrianhumbertocastillo@gmail.com</td></tr>
-                            <tr>
-                                <td>
-                                    <center>
-                                        <a href="https://www.facebook.com/adrian.humberto.12" target="_blank" class="botonesRedes">
-                                            <img class="imgRedes" src="Resources/img/Redes/facebook.ico" alt="adrian.humberto.12" >
-                                        </a>
-                                        <!--<a href="https://www.instagram.com/adrianhumbertcastillo/" target="_blank" class="botonesRedes">
-                                            <img class="imgRedes" src="Resources/img/Redes/instagram.ico" alt="adrianhumbertcastillo">
-                                        </a>
-                                        <a href="https://acastillo20.blogspot.com/" target="_blank" class="botonesRedes">
-                                            <img class="imgRedes" src="Resources/img/Redes/blog.ico" alt="acastillo20.blogspot.com">
-                                        </a>-->
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        </table>
-                    </center>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer">   
-                <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>                   
-                </div>
-            </div>      
-
-        </div>
-    </div> 
 
     <!-- Cotenido Header para evitar retraso de "About"-->
     <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">   
