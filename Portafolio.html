@@ -31,16 +31,16 @@
                     <ul>    
                         <li>
                             <a href="index.html"><span class="icon-home"></span> Inicio</a>
-                        </li>                	
-                        <li>
-                            <a href="#"><span class="icon-checkmark"></span>Portafolio</a>
                         </li>                            
                         <li>
                             <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
                         </li>                        
                         <li>
                             <a href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
-                        </li>                                
+                        </li>
+                        <li>
+                            <a href="Guia.html" title="Guias y Codigo"><span class="icon-embed"></span>Guias y Codigo</a>
+                        </li>                                 
                     </ul>
                 </nav>
             </div>    
@@ -48,7 +48,7 @@
     
 
         <div class="container">
-            <h1 class="lead">Guias y Codigo</h1>
+            <h1 class="lead">Algunos Proyectos</h1>
         </div>
         
         <div id="PanelPrincipal" class="container">
@@ -64,43 +64,7 @@
                             <img :src="tecnologias.imagen" width="25px" height="25px"><b>{{ tecnologias.nombre}}</b>                                      
                         </li>                
 
-                    </ul>    
-
-                    <ul v-if="ListaVue === true"  class="list-group" v-show="ListaVue">
-                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>
-                        <li v-for="item in ItemVue" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(0, item.id, item.titulo)">
-                            <a class="TextoModal" :href="item.enlace" target="_blank">
-                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
-                            </a>
-                        </li> 
-                    </ul>  
-
-                    <ul v-if="ListaGit === true" class="list-group" v-show="ListaGit">
-                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button> 
-                        <li v-for="item in ItemGit" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(1, item.id)">
-                            <a class="TextoModal">
-                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
-                            </a>
-                        </li>                                                        
-                    </ul> 
-
-                    <ul v-if="ListaLinux === true"  class="list-group" v-show="ListaLinux">
-                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>
-                        <li v-for="item in ItemLinux" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(2, item.id, item.titulo)">
-                            <a class="TextoModal">
-                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
-                            </a>
-                        </li> 
-                    </ul>                                 
-
-                    <ul v-if="ListaSql === true" class="list-group" v-show="ListaSql">
-                        <button @click="MostrarTituloUno()" type="button" class="btn btn-default">Regresar</button>                        
-                        <li v-for="item in ItemSql" class="list-group-item TituloGuia" title="Mostrar Ejemplo" @click="MostrarCodigo(3, item.id)">
-                            <a class="TextoModal">
-                            <img :src="item.imagen" width="25px" height="25px"> {{item.titulo}}
-                            </a>
-                        </li>  
-                    </ul>                   
+                    </ul>                
 
 
                     <!-- Modal Datos -->
@@ -126,19 +90,14 @@
                                 </div>
                             </div>                  
                         </div>
-                    </div> 
-
-                    <!-- Div Codigo -->
-                    <div v-show="DivMostrar">
-                        <button @click="RegresarLista()" type="button" class="btn btn-default">Regresar</button>
-                        <center><h2>{{$data.TituloDiv}}</h2></center>
-                        <div v-html="CodigoDiv"></div>    
-                    </div>   
+                    </div>                     
 
                 </div>
             </div>          
             
-        </div>      
+        </div>  
+
+     
 
         <!-- Cotenido Header para evitar retraso de "About default"-->
         <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">    
@@ -154,13 +113,13 @@
         <script async src="Resources/prism/prism.js"></script>  
         <script async src="Resources/js/Guia.min.js"></script> 
         
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'UA-144197995-1');
-        </script>
+        </script> -->
     </body>
 </html>
