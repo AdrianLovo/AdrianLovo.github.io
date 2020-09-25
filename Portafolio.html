@@ -45,56 +45,39 @@
     
 
         <div class="container">
-            <h1 class="lead">Algunos Proyectos</h1>
+            <h1 class="lead">Proyectos</h1>
         </div>
         
         <div id="PanelPrincipal" class="container">
-              
+            
             <!-- Listado de proyectos-->
-            <div v-if="ListaUno == true">
-                <div class="list-group-item TituloGuia
-                    card col-xs-12 col-sm-4 col-md-3 col-lg-3  
-                    col-lg-offset-1 col-md-offset-1 col-sm-offset-1 
-                    marco"  
-                    v-for="proyecto in Proyectos">
-                    <div class="centrado">
-                        <img class="card-img-top" :src="proyecto.imagen" width="100%" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
+            <div>
+
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" v-for="proyecto in Proyectos">                    
+                    <div class="box" style="max-height: 350px;height: 350px;">
                         <div class="centrado">
-                            <h5 class="card-title"><b>{{proyecto.nombre}}</b></h5>
-                            <p class="card-text">{{proyecto.descripcion}}</p>                        
-                            <button class="btn btn-success" >Website</button>
-                            <button class="btn btn-info" @click="MostrarCodigo(proyecto.id)">Mas Detalles</button>
+                            <a :href="proyecto.url" target="_blank">
+                                <img class="card-img-top" :src="proyecto.imagen" width="100%" alt="Card image cap" style="border-radius: 5px; margin-bottom: 5px;">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="centrado">
+                                <h5 class="card-title"><b>{{proyecto.nombre}}</b></h5>
+
+                                <div v-for="tecnologia in proyecto.tecnologias" style="display: inline-flex;">
+                                    <a class="card_lenguaje">{{tecnologia}}</a>
+                                </div>
+                                
+                                <div style="margin-top: 10px;">    
+                                    <a  class="btn btn-success" :href="proyecto.repositorio" target="_blank"><span class="icon-earth"></span> Website</a>
+                                    <a  class="btn btn-default" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>            
 
-            <!-- Modal Datos -->
-            <div class="modal" role="dialog" :class="{show:ModalMostra}" style="margin-top: 100px; width: 100%">
-                    <div class="modal-dialog modal-lg">
-    
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <center>
-                                <h4 class="modal-title">{{$data.TituloModal}}</h4>
-                            </center>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                
-                            <div id="CodigoContenido">
-                                <div v-html="CodigoModal"></div>      
-                                <center><button type='button' class='btn btn-info' @click="CerrarModal()">Cerrar</button></center>                                 
-                            </div> 
-
-                        </div>    
-                        <div class="modal-footer">
-                        </div>
-                    </div>                
-                </div>
-            </div>        
+            </div>                   
                         
         </div>       
 
@@ -109,6 +92,7 @@
         <!------------------------------------------------------------>             
         <script async src="Resources/js/Menu.min.js"></script>       
         <script async src="Resources/js/Portafolio.min.js"></script>  
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
         <script>
