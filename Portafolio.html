@@ -54,10 +54,10 @@
             <div>
 
                 <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" v-for="proyecto in Proyectos">                    
-                    <div class="box" style="max-height: 350px;height: 350px;">
+                    <div class="box" style="max-height:350px;height: 350px;">
                         <div class="centrado">
                             <a :href="proyecto.url" target="_blank">
-                                <img class="card-img-top" :src="proyecto.imagen" width="100%" alt="Card image cap" style="border-radius: 5px; margin-bottom: 5px;">
+                                <img class="img-fluid" :src="proyecto.imagen" :alt="proyecto.nombre" style="border-radius: 5px; margin-bottom: 5px; width: 100%; height: 180px; object-fit: scale-down;">
                             </a>
                         </div>
                         <div class="card-body">
@@ -65,11 +65,11 @@
                                 <h5 class="card-title"><b>{{proyecto.nombre}}</b></h5>
 
                                 <div v-for="tecnologia in proyecto.tecnologias" style="display: inline-flex;">
-                                    <a class="card_lenguaje">{{tecnologia}}</a>
+                                    <spam class="card_lenguaje">{{tecnologia}}</spam>
                                 </div>
                                 
                                 <div style="margin-top: 10px;">    
-                                    <a  class="btn btn-success" :href="proyecto.repositorio" target="_blank"><span class="icon-earth"></span> Website</a>
+                                    <a  class="btn btn-success" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
                                     <a  class="btn btn-default" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>
                                 </div>
                             </div>
