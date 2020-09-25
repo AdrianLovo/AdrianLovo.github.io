@@ -138,29 +138,7 @@
                 </div>               
             </div> 
         </div>
-       
-        
-
-        <!-- Modal Otros lenguajes de programacion-->    
-        <div id="ModalOtrosLenguajes" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <center><h4 class="modal-title">Otros lenguajes de programacion aprendidos en la Universidad</h4></center>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-group">
-                            <li class="list-group-item" v-for="otroLenguaje in OtrosLenguajes">
-                                <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre" class="imgOtroLenguaje">
-                                <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}} 
-                            </li>                            
-                        </ul> 
-                        <p><center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center></p>
-                    </div>                      
-                </div>     
-            </div>  
-        </div>
-    
+           
         <!-- Modal Otros cursos -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">           
 
@@ -183,7 +161,27 @@
                     </div>     
                 </div>  
             </div>
-        </div>        
+        </div>   
+        
+        <!-- Modal Otros lenguajes de programacion-->    
+        <div id="ModalOtrosLenguajes" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <center><h4 class="modal-title">Otros lenguajes de programacion aprendidos en la Universidad</h4></center>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item" v-for="otroLenguaje in OtrosLenguajes">
+                                <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre" class="imgOtroLenguaje">
+                                <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}} 
+                            </li>                            
+                        </ul> 
+                        <p><center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center></p>
+                    </div>                      
+                </div>     
+            </div>  
+        </div>
 
     </div>
     
