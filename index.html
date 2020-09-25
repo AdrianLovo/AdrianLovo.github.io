@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Adrian Humberto Castillo Lovo</title>
         <link rel="shortcut icon" href="Resources/img/favicon.ico">  
         
@@ -92,7 +91,7 @@
                 </div>
             </div>  
 
-            <div id="Habilidades" class="col-xs-12 col-sm-9 col-md-9 col-lg-9  marco">
+            <div id="Habilidades" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 marco">
             
                 <!-- Lenguajes de Programacion -->
                 <div>
@@ -117,39 +116,29 @@
     
             </div>
         </div>
-        
 
-        
-
-        <!-- Sobre JavaEE  
-        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <p><center>
-                <b>Sobre JavaEE:</b>
-            </center></p>
-            <p>•<b>JPA</b> (Java Persistence Api) como framework de persistencia para realizar el mapeo de la base de datos.<br></p>
-            <p>•<b>EJB</b> (Enterprise JavaBeans) para la capa de procesos.<br></p>
-            <p>•<b>JSF</b> (Java Server Faces) como framework para la vista utilizando las librerías de <i><b>Primefaces</b></i> para agilizar el desarrollo y mejorar la estética en general.<br></p>
-            <p>•<b>JasperReports</b> Como herramienta para la generación de reportes.<br> </p>
-        </div>--> 
+        <div class="row">
+            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9  col-sm-offset-3 col-md-offset-3 col-lg-offset-3 marco">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <h2 class="ac title-size tituloSecundario">¿En qué estoy trabajando?<i class="title_line"></i></h2> 
+                    <div v-for="trabajo in Trabajo">
+                        <span class="icon-checkmark"></span>{{trabajo}}<br> 
+                    </div>                                            
+                </div>    
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <h2 class="ac title-size tituloSecundario">Objetivos<i class="title_line"></i></h6>
+                    Actualmente mi objetivo principal es encontrar la oportunidad para formar parte del equipo de desarrolladores de una empresa dedicada al mundo de internet en general, para poder seguir evolucionando como profesional, aportando todo el conocimiento y experiencia adquirida para ser un miembro importante.
+                </div>         
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <h2 class="ac title-size tituloSecundario">Cualidades<i class="title_line"></i></h2>
+                    <div v-for="cualidad in Cualidades">
+                        <span class="icon-checkmark"></span>{{cualidad}} <br>     
+                    </div>                                         
+                </div>               
+            </div> 
+        </div>
        
-        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9  col-sm-offset-3 col-md-offset-3 col-lg-offset-3 marco">
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <h2 class="ac title-size">¿En qué estoy trabajando?<i class="title_line"></i></h2> 
-                <div v-for="trabajo in Trabajo">
-                    <span class="icon-checkmark"></span>{{trabajo}}<br> 
-                </div>                                            
-            </div>    
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <h2 class="ac title-size">Objetivos<i class="title_line"></i></h6>
-                Actualmente mi objetivo principal es encontrar la oportunidad para formar parte del equipo de desarrolladores de una empresa dedicada al mundo de internet en general, para poder seguir evolucionando como profesional, aportando todo el conocimiento y experiencia adquirida para ser un miembro importante.
-            </div>         
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                <h2 class="ac title-size">Cualidades<i class="title_line"></i></h2>
-                <div v-for="cualidad in Cualidades">
-                    <span class="icon-checkmark"></span>{{cualidad}} <br>     
-                </div>                                         
-            </div>               
-        </div> 
+        
 
         <!-- Modal Otros lenguajes de programacion-->    
         <div id="ModalOtrosLenguajes" class="modal fade" role="dialog">
@@ -172,8 +161,7 @@
         </div>
     
         <!-- Modal Otros cursos -->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">           
 
             <div id="ModalOtrosCursos" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -194,10 +182,10 @@
                     </div>     
                 </div>  
             </div>
-        </div>
-               
-    </div>		 
-           
+        </div>        
+
+    </div>
+    
     <footer class="footer">
         <h5>SOBRE ESTA PAGINA</h5>
         <p>Este sitio web ha sido diseñado y codeado a mano con VSC en HTML5 y CSS3 con el framework Vue.js y Bootstrap.</p>

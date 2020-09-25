@@ -5,7 +5,6 @@
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
         
         <title>Adrian Humberto Castillo Lovo</title>
         <link rel="shortcut icon" href="Resources/img/favicon.ico"> 
@@ -19,8 +18,6 @@
     
     <body>
                                                                                    
-
-
         <header>            
             <!--Menu Principal-->
             <div id="Menu" class="fijo">
@@ -52,70 +49,73 @@
         </div>
         
         <div id="PanelPrincipal" class="container">
-                
-            <div class="panel panel-default">
-              <div class="panel-body">
-
-                    <!-- SQL -->
-                    <ul v-if="ListaUno == true" class="list-group" style="margin-top: 15px">
-                        
-                        <li v-for="tecnologias in Tecnologias" class="list-group-item TituloGuia" @click="MostrarLista(tecnologias.id)">
-                            <span class="badge">{{tecnologias.entradas}}  </span>                           
-                            <img :src="tecnologias.imagen" width="25px" height="25px"><b>{{tecnologias.nombre}}</b>                                      
-                        </li>                
-
-                    </ul>                
-
-
-                    <!-- Modal Datos -->
-                    <div class="modal" role="dialog" :class="{show:ModalMostra}" style="margin-top: 100px; width: 100%">
-                           <div class="modal-dialog modal-lg">
-            
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <center>
-                                        <h4 class="modal-title">{{$data.TituloModal}}</h4>
-                                    </center>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        
-                                   <div id="CodigoContenido">
-                                     <div v-html="CodigoModal"></div>      
-                                     <center><button type='button' class='btn btn-info' @click="CerrarModal()">Cerrar</button></center>                                 
-                                   </div> 
-
-                                </div>    
-                                <div class="modal-footer">
-                                </div>
-                            </div>                  
+              
+            <!-- Listado de proyectos-->
+            <div v-if="ListaUno == true">
+                <div class="list-group-item TituloGuia
+                    card col-xs-12 col-sm-4 col-md-3 col-lg-3  
+                    col-lg-offset-1 col-md-offset-1 col-sm-offset-1 
+                    marco"  
+                    v-for="proyecto in Proyectos">
+                    <div class="centrado">
+                        <img class="card-img-top" :src="proyecto.imagen" width="100%" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <div class="centrado">
+                            <h5 class="card-title"><b>{{proyecto.nombre}}</b></h5>
+                            <p class="card-text">{{proyecto.descripcion}}</p>                        
+                            <button class="btn btn-success" >Website</button>
+                            <button class="btn btn-info" @click="MostrarCodigo(proyecto.id)">Mas Detalles</button>
                         </div>
-                    </div>                     
-
+                    </div>
                 </div>
-            </div>          
-            
-        </div>  
+            </div>            
 
-     
+            <!-- Modal Datos -->
+            <div class="modal" role="dialog" :class="{show:ModalMostra}" style="margin-top: 100px; width: 100%">
+                    <div class="modal-dialog modal-lg">
+    
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <center>
+                                <h4 class="modal-title">{{$data.TituloModal}}</h4>
+                            </center>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                
+                            <div id="CodigoContenido">
+                                <div v-html="CodigoModal"></div>      
+                                <center><button type='button' class='btn btn-info' @click="CerrarModal()">Cerrar</button></center>                                 
+                            </div> 
+
+                        </div>    
+                        <div class="modal-footer">
+                        </div>
+                    </div>                
+                </div>
+            </div>        
+                        
+        </div>       
 
         <!-- Cotenido Header para evitar retraso de "About default"-->
         <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css"> 
         <link rel="stylesheet" href="Resources/css/bootstrap.min.css">
-        <link rel="stylesheet" href="Resources/css/Guia.min.css">   
+        <link rel="stylesheet" href="Resources/css/Guia.min.css">           
+        <link rel="stylesheet" href="Resources/css/Portafolio.min.css">
         <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    
         <!------------------------------------------------------------>             
-
         <script async src="Resources/js/Menu.min.js"></script>       
         <script async src="Resources/js/Portafolio.min.js"></script>  
-        <!-- Global site tag (gtag.js) - Google Analytics
+        <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'UA-144197995-1');
-        </script> -->
+        </script> 
     </body>
 </html>
