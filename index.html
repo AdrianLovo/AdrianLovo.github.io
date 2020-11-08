@@ -19,21 +19,21 @@
     <header>                   
         <div id="menu" class="header--menu">
             <div id="menuButton" class="menu--button">
-                <a class="bt-menu"><span class="icon-menu"></span>Menu</a>
+                <p class="bt-menu"><span class="icon-menu"></span>Menu</p>
             </div>  
             <nav id="menuNav">
                 <ul>                    	
                     <li>
-                        <a href="Portafolio.html"><span class="icon-cog"></span>Portafolio</a>
+                        <a href="Portafolio.html" rel="noopener"><span class="icon-cog"></span>Portafolio</a>
                     </li>                            
                     <li>
-                        <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
+                        <a href="https://github.com/AdrianLovo/" rel="noopener"><span class="icon-github"></span>GitHub</a>
                     </li>                        
                     <li>
-                        <a href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
+                        <a href="mailto:adrianhumbertocastillo@gmail.com" rel="noopener" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
                     </li>
                     <li>
-                        <a href="#" title="Blog"><span class="icon-book"></span>Blog</a>
+                        <a href="#" title="Blog"><span class="icon-book" ></span>Blog</a>
                     </li>                                 
                 </ul>
             </nav>
@@ -45,20 +45,20 @@
         <!--Bloque_Informacion_Personal-->
         <aside class="informacion marco">            
             <section class="informacion_principal">
-                <img src="Resources/img/Foto.webp" class=" foto" alt="Foto de perfil">   
+                <img src="Resources/img/Foto.webp" class=" foto" alt="Foto de perfil" width="150px" height="155px">   
                 <h1 class="informacion_principal--nombre">Adrián Humberto Castillo Lovo</h1> 
                 <p class="informacion_principal--subtitulo">Programación | Tecnología | Libros</p>                
             </section>
             
             <section class="informacion_icons">
-                <a href="https://www.facebook.com/adrian.humberto.12" target="_blank">
-                    <img class=" informacion_icons--redesIcon" src="Resources/img/Redes/facebook.png" alt="adrian.humberto.12" >
+                <a href="https://www.facebook.com/adrian.humberto.12" rel="noopener" target="_blank" >
+                    <img class=" informacion_icons--redesIcon" src="Resources/img/Redes/facebook.png" alt="adrian.humberto.12" width="25px" height="25px">
                 </a>
-                <a href="https://acastillo20.blogspot.com/" target="_blank">
-                    <img class=" informacion_icons--redesIcon" src="Resources/img/Redes/blog.png" alt="acastillo20.blogspot.com">
+                <a href="https://acastillo20.blogspot.com/" rel="noopener" target="_blank">
+                    <img class=" informacion_icons--redesIcon" src="Resources/img/Redes/blog.png" alt="acastillo20.blogspot.com" width="25px" height="25px">
                 </a>                    
-                <a href="https://github.com/AdrianLovo/" target="_blank">
-                    <img class=" informacion_icons--redesIcon" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo">
+                <a href="https://github.com/AdrianLovo/" rel="noopener" target="_blank">
+                    <img class=" informacion_icons--redesIcon" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo" width="25px" height="25px">
                 </a>
             </section>            
         </aside>
@@ -98,7 +98,7 @@
                                 <li class="informacion_modal--lista" v-for="curso in OtrosCursos"><b>{{curso.nombre}}</b> {{curso.lugar}}</li>
                                 <li class="informacion_modal--lista">
                                    <center>
-                                    <a href="https://platzi.com/@AdrianCas/" target="_blank">
+                                    <a href="https://platzi.com/@AdrianCas/" rel="noopener" target="_blank">
                                         Otros cursos online realizados</a>
                                    </center> 
                                 </li>
@@ -120,7 +120,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img :src="lenguaje.url" class=" tecnologias_container--item" :alt="lenguaje.nombre" :title="lenguaje.nombre" width="48px" height="48px">
+                                    <img :src="lenguaje.url" class="tecnologias_container--item" alt="imagen de lenguaje" :title="lenguaje.nombre" width="48px" height="48px">
                                 </td>
                             </tr>
                             <tr>
@@ -147,7 +147,7 @@
 
                                 <ul>
                                     <li class="informacion_modal--lista" v-for="otroLenguaje in OtrosLenguajes">
-                                        <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre" class="">
+                                        <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre"  width="25px" height="25px">
                                         <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}}
                                     </li>
                                 </ul>                          
@@ -193,7 +193,7 @@
 
 
     <!-- Cotenido Header para evitar retraso de "About"-->    
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700">
     <link rel="stylesheet" href="./Resources/css/menu.min.css" media="screen and (max-width: 768px)"/> 
     <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">  
     <link rel="stylesheet" href="./Resources/css/index.min.css">

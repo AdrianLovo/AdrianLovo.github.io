@@ -19,21 +19,21 @@
     <header>                   
         <div id="menu" class="header--menu">
             <div id="menuButton" class="menu--button">
-                <a class="bt-menu"><span class="icon-menu"></span>Menu</a>
+                <p class="bt-menu"><span class="icon-menu"></span>Menu</p>
             </div>  
             <nav id="menuNav">
                 <ul>                    	
                     <li>
-                        <a href="index.html"><span class="icon-home"></span>Principal</a>
+                        <a rel="noopener" href="index.html"><span class="icon-home"></span>Principal</a>
                     </li>                            
                     <li>
-                        <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
+                        <a rel="noopener" href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
                     </li>                        
                     <li>
-                        <a href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
+                        <a rel="noopener" href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
                     </li>
                     <li>
-                        <a href="#" title="Blog"><span class="icon-book"></span>Blog</a>
+                        <a rel="noopener" href="#" title="Blog"><span class="icon-book"></span>Blog</a>
                     </li>                                 
                 </ul>
             </nav>
@@ -51,18 +51,18 @@
         <section class="container" >            
            <div v-for="proyecto in Proyectos">    
                 <article class="article_container marco">
-                    <a :href="proyecto.url" target="_blank">
+                    <p :href="proyecto.url" target="_blank">
                         <img class="article_container--imagen" :src="proyecto.imagen" :alt="proyecto.nombre">
-                    </a>
-                    <h5 class="article_body--title"><b>{{proyecto.nombre}}</b></h5>  
+                    </p>
+                    <h2 class="article_body--title"><b>{{proyecto.nombre}}</b></h2>  
                     <div class="article_body">                                                
                         <div v-for="tecnologia in proyecto.tecnologias" class="container_etiquetas">
                             <spam class="etiqueta_lenguaje">{{tecnologia}}</spam>
                         </div>                                                 
                     </div>
                     <div class="article_footer">                                 
-                        <a  class="sitio--button" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
-                        <a  class="github--button" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>                                            
+                        <a rel="noopener" class="sitio--button" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
+                        <a rel="noopener" class="github--button" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>                                            
                     </div>                    
                 </article>           
             </div>                   
