@@ -5,7 +5,7 @@
 	- CSS3 (CSS Grid y Grid Layout)
 	- JavaScript
 
-## Librerias y Frameworks Utilizados
+## Frameworks Utilizados
 	- Vue.js
 
 
