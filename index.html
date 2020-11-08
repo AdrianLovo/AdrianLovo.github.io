@@ -42,24 +42,23 @@
 
     <!--Principal-->
     <main id="Principal">
-
         <!--Bloque_Informacion_Personal-->
         <aside class="informacion marco">            
             <section class="informacion_principal">
-                <img src="Resources/img/Foto.webp" class="foto" alt="Foto de perfil">   
+                <img src="Resources/img/Foto.webp" class="lazyload foto" alt="Foto de perfil">   
                 <h1 class="informacion_principal--nombre">Adrián Humberto Castillo Lovo</h1> 
                 <p class="informacion_principal--subtitulo">Programación | Tecnología | Libros</p>                
             </section>
             
             <section class="informacion_icons">
                 <a href="https://www.facebook.com/adrian.humberto.12" target="_blank">
-                    <img class="informacion_icons--redesIcon" src="Resources/img/Redes/facebook.ico" alt="adrian.humberto.12" >
+                    <img class="lazyload informacion_icons--redesIcon" src="Resources/img/Redes/facebook.ico" alt="adrian.humberto.12" >
                 </a>
                 <a href="https://acastillo20.blogspot.com/" target="_blank">
-                    <img class="informacion_icons--redesIcon" src="Resources/img/Redes/blog.ico" alt="acastillo20.blogspot.com">
+                    <img class="lazyload informacion_icons--redesIcon" src="Resources/img/Redes/blog.ico" alt="acastillo20.blogspot.com">
                 </a>                    
                 <a href="https://github.com/AdrianLovo/" target="_blank">
-                    <img class="informacion_icons--redesIcon" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo">
+                    <img class="lazyload informacion_icons--redesIcon" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo">
                 </a>
             </section>            
         </aside>
@@ -121,7 +120,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img :src="lenguaje.url" class="tecnologias_container--item" :alt="lenguaje.nombre" :title="lenguaje.nombre" width="48px" height="48px">
+                                    <img :src="lenguaje.url" class="lazyload tecnologias_container--item" :alt="lenguaje.nombre" :title="lenguaje.nombre" width="48px" height="48px">
                                 </td>
                             </tr>
                             <tr>
@@ -148,7 +147,7 @@
 
                                 <ul>
                                     <li class="informacion_modal--lista" v-for="otroLenguaje in OtrosLenguajes">
-                                        <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre">
+                                        <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre" class="lazyload">
                                         <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}}
                                     </li>
                                 </ul>                          
@@ -202,6 +201,7 @@
 
     <!--Librerias JavaScript-->
     <script type="text/javascript" src="Resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="Resources/js/lazysizes.min.js"></script>
 
     <!--JavaScript-->
     <script async  src="Resources/js/Menu.min.js"></script> 
