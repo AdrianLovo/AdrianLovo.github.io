@@ -1,49 +1,154 @@
-.marco {
+.tituloPrincipal{
+    margin-top: 80px;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.container{
+    box-sizing: border-box;
+    background-color:  white;     
+    width: 100%;
+    padding: 20px;  
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
     border: 1px solid #b1b1b3;
+    background-color: #ffffff;
     border-radius: 5px;
-    background-color: #ffffffe0;
-    padding: 15px;
-    margin-bottom: 15px
-}
-
-.centrado {
-    text-align: center
-}
-
-.padding_box {
-    padding-right: 25px
-}
-
-.card-body>button {
-    display: inline
-}
-
-.box {
     -webkit-box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .5);
     -moz-box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .5);
-    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .5);
-    padding: 12px;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
-    border-radius: 5px
+    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .5);        
+}
+.article_footer a{
+    text-decoration: none;
+    margin-left: 10px;
 }
 
-.textoDescriptionNegrita {
-    font-size: 15px;
-    font-weight: 700
-}
-
-.card_lenguaje {
-    box-sizing: border-box;
-    padding: 0 6px;
+/*Botones*/
+.sitio_button{
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.sitio--button{
+    font-size: 1.5rem;
+    border: 1px solid #5cb85c;
+    background-color: #4cae4c;     
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;    
+    border-radius: 5px;    
+}  
+.sitio--button:hover {
+    background: #449d44;
+    border: 1px solid #398439;      
+}
+.sitio--button:focus{
+    outline: none;
+}
+
+.github_button{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.github--button{
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    background-color: #fff;   
+    color: black;
+    padding: 6px 12px;
+    cursor: pointer;    
+    border-radius: 5px;    
+}  
+.github--button:hover {
+    background: #e6e6e6;
+    border: 1px solid #8c8c8c;      
+}
+.github--button:focus{
+    outline: none;
+}
+
+
+/*Proyectos*/
+.article_container{
+    background-color: white;
+    width: 90%;
+    margin: 2%;
+    min-height: 320px;
+    max-width: 300px;
+}
+.article_container--imagen{
+    border-radius: 2px; 
+    margin-bottom: 5px; 
+    margin-top: 5px;
+    width: 95%; 
+    height: 180px; 
+    margin-left: 2.5%;
+    object-fit: scale-down;
+    max-width: 300px;
+}
+.article_body--title{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+}
+.article_body{
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.etiqueta_lenguaje {
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 6px;
     line-height: 22px;
     height: 22px;
     border-radius: 5px;
     border: 1px solid #6b6b6b;
     margin: 2px
 }
+.article_footer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 
-.card_lenguaje:hover {
-    background-color: #ddd
 }
+
+
+/*Footer*/
+.footer_portafolio {
+    width: 100%;
+    background-color: #286090;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: 0;    
+}
+.footer_portafolio h3 {
+    padding-top: 10px;
+    font-size: 1.4rem;
+}
+.footer_portafolio p {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/*A partir de 768px*/
+@media screen and (max-width: 768px) {
+    .footer_portafolio{
+        position: inherit;
+        margin-top: 20px
+    }
+    .container{
+        margin-bottom: 0px;
+    }
+}
+

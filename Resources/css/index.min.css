@@ -178,59 +178,6 @@
 }
 
 
-/*A partir de 768px*/
-@media screen and (min-width: 768px) {
-    main{
-        grid-template-columns: 200px 1fr;
-        grid-template-areas: 'informacion formacion'
-                            'informacion tecnologias'
-                            '. sobremi';
-    }
-    .formacion{
-        margin-top: 80px;   
-    }
-    .informacion{
-        width: 95%;
-        margin: 80px 0 0 auto;
-        height: 68%;
-        
-    }
-    .formacion_container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .formacion_container--article{
-        width: 30%;
-    }
-    .sobremi{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .sobremi--article{
-        width: 30%;
-        padding: 0;
-    }    
-}
 
 
-/*A partir de 1250px en adelante*/
-@media screen and (min-width: 1250px) {
-    main{
-        grid-template-columns: 1fr;
-        grid-template-areas: 'informacion'
-                            'formacion'
-                            'tecnologias'
-                            'sobremi';
-    }
-    .formacion{
-        margin-top: 10px;   
-    }
-    .informacion{
-        width: 95%;  
-        margin: 80px auto 0px auto;        
-        height: initial;
-    }
-}
 

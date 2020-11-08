@@ -10,8 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 
     <!-- Critical Css-->
-    <link rel="stylesheet" href="Resources2/css/CriticalCss.css">
-    <link rel="stylesheet" href="./Resources2/css/menu.min.css" media="screen and (max-width: 768px)"/> 
+    <link rel="stylesheet" href="Resources/css/CriticalCss.css">
+    <link rel="stylesheet" href="Resources/css/portafolio.min.css">
+    <link rel="stylesheet" href="./Resources/css/menu.min.css" media="screen and (max-width: 768px)"/> 
 </head>
 
 <body>
@@ -25,7 +26,7 @@
             <nav id="menuNav">
                 <ul>                    	
                     <li>
-                        <a href="Principal.html"><span class="icon-cog"></span>Principal</a>
+                        <a href="index.html"><span class="icon-home"></span>Principal</a>
                     </li>                            
                     <li>
                         <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
@@ -44,66 +45,60 @@
     <!--Principal-->
     <main id="Principal">
 
-       
+        <div class="tituloPrincipal">
+            <h1>Ultimos Proyectos Realizados</h1>
+        </div>
 
-        <section>
-            <div v-for="proyecto in Proyectos">                    
-                    <div class="centrado">
-                        <a :href="proyecto.url" target="_blank">
-                            <img class="img-fluid" :src="proyecto.imagen" :alt="proyecto.nombre" style="border-radius: 5px; margin-bottom: 5px; width: 100%; height: 180px; object-fit: scale-down;">
-                        </a>
+        <!--Bloque_Informacion_Personal-->
+        <section class="container" >            
+           <div v-for="proyecto in Proyectos">    
+                <article class="article_container marco">
+                    <a :href="proyecto.url" target="_blank">
+                        <img class="article_container--imagen" :src="proyecto.imagen" :alt="proyecto.nombre">
+                    </a>
+                    <h5 class="article_body--title"><b>{{proyecto.nombre}}</b></h5>  
+                    <div class="article_body">                                                
+                        <div v-for="tecnologia in proyecto.tecnologias" class="container_etiquetas">
+                            <spam class="etiqueta_lenguaje">{{tecnologia}}</spam>
+                        </div>                                                 
                     </div>
-                    <div class="card-body">
-                        <div class="centrado">
-                            <h5 class="card-title"><b>{{proyecto.nombre}}</b></h5>
-
-                            <div v-for="tecnologia in proyecto.tecnologias" style="display: inline-flex;">
-                                <spam class="card_lenguaje">{{tecnologia}}</spam>
-                            </div>
-                            
-                            <div style="margin-top: 10px;">    
-                                <a  class="btn btn-success" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
-                                <a  class="btn btn-default" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
+                    <div class="article_footer">                                 
+                        <a  class="sitio--button" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
+                        <a  class="github--button" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>                                            
+                    </div>                    
+                </article>           
+            </div>                   
+        </section> 
 
     </main>
     
 
-    <!--Footer--
-    <footer class="footer">
+    <!--Footer-->
+    <footer class="footer_portafolio">
         <h3>SOBRE ESTA PAGINA</h3>
         <p>Este sitio web ha sido diseñado y codeado con VSC en HTML5 y CSS3 (CSS Grid y Flex Layout) con el framework Vue.js.</p>
         <p>La web se encuentra alojada en un repositorio en GitHub (GitHubPages) y está diseñada siguiendo las tendencias en diseño web MobileFirst, por tanto se adapta perfectamente a cualquier dispositivo en el que se visualice</p>
-    </footer> -->
+    </footer> 
 
     <!-- Cotenido Header para evitar retraso de "About"-->
-    <link rel="stylesheet" type="text/css" href="Resources2/fonts/fonts.css">  
-    <link rel="stylesheet" href="./Resources2/css/index.min.css">
-    <link rel="stylesheet" href="./Resources2/css/modal.min.css">
-
+    <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">  
+    
     <!--Librerias JavaScript-->
-    <script type="text/javascript" src="Resources2/js/vue.min.js"></script>
-    <script type="text/javascript" src="Resources2/js/vue.min.js"></script>
+    <script type="text/javascript" src="Resources/js/vue.min.js"></script>
+    <script type="text/javascript" src="Resources/js/Portafolio.min.js"></script>
 
     <!--JavaScript-->
-    <script async  src="Resources2/js/Menu.min.js"></script> 
-    <script async  src="Resources2/js/index.min.js"></script>  
+    <script async  src="Resources/js/Menu.min.js"></script> 
+    <script async  src="Resources/js/index.min.js"></script>  
     
-    <!-- Global site tag (gtag.js) - Google Analytics-
+    <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-144197995-1');
-    </script>-->
+    </script>
 
 </body>
 </html>
