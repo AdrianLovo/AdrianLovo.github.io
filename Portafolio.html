@@ -1,105 +1,109 @@
 <!DOCTYPE html>
-<html class="no-js" lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Adrian Humberto Castillo Lovo</title>
-        <link rel="shortcut icon" href="Resources/img/favicon.ico"> 
-        <!-- Critical Css-->
-        <style>
-            *{margin:0;padding:0}body{background:#FFFFFA}header{width:100%}header nav{width:100%;max-width:100%;margin:0px auto;background:#286090}.menu_bar{display:none;z-index:40}header nav ul{overflow:hidden;list-style:none}header nav ul li{float:left}header nav ul li a{padding:20px;display:block;text-decoration:none}header nav ul li span{margin-right:10px}header nav ul li a:hover{background:#337ab7}@media screen and (max-width:800px){header nav{width:75%;height:100%;left:-100%;margin:0;position:fixed}header nav ul li{display:block;float:none;border-bottom:1px solid rgba(255,255,255,.3)}.menu_bar{display:block;width:100%;background:#ccc}.menu_bar .bt-menu{display:block;padding:20px;background:#286090;color:#fff;text-decoration:none;font-weight:bold;font-size:25px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.menu_bar span{float:right;font-size:40px}}nav ul li a{text-decoration:none!important;color:white!important}
-        </style>        
-        <script src="Resources/js/vue.min.js"></script> 
+<html lang="es">
+<head>
+    <meta charset="utf-8">  
+    <meta name="robots" content="index,follow">         
+    <meta name="description" content="Portafolio y Sitio Web Personal Adrián Castillo">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <title>Adrián Humberto Castillo Lovo</title>
+    <link rel="shortcut icon" href="Resources/img/favicon.ico">  
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 
-    </head>
-    
-    <body>
-                                                                                   
-        <header>            
-            <!--Menu Principal-->
-            <div id="Menu" class="fijo">
-                <div class="menu_bar">
-                    <a class="bt-menu"><span class="icon-menu"></span>Menu</a>
-                </div>  
-                <nav>
-                    <ul>    
-                        <li>
-                            <a href="index.html"><span class="icon-home"></span> Inicio</a>
-                        </li>                            
-                        <li>
-                            <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
-                        </li>                        
-                        <li>
-                            <a href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
-                        </li>
-                        <li>
-                            <a href="Guia.html" title="Guias y Codigo"><span class="icon-embed"></span>Guias y Codigo</a>
-                        </li>                                 
-                    </ul>
-                </nav>
-            </div>    
-        </header>   
-    
+    <!-- Critical Css-->
+    <link rel="stylesheet" href="Resources2/css/CriticalCss.css">
+    <link rel="stylesheet" href="./Resources2/css/menu.min.css" media="screen and (max-width: 768px)"/> 
+</head>
 
-        <div class="container">
-            <h1 class="lead">Ultimos Proyectos</h1>
-        </div>
-        
-        <div id="PanelPrincipal" class="container">
-            
-            <!-- Listado de proyectos-->
-            <div>
+<body>
 
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3" v-for="proyecto in Proyectos">                    
-                    <div class="box" style="max-height:350px;height: 350px;">
+    <!--Menu Principal-->
+    <header>                   
+        <div id="menu" class="header--menu">
+            <div id="menuButton" class="menu--button">
+                <a class="bt-menu"><span class="icon-menu"></span>Menu</a>
+            </div>  
+            <nav id="menuNav">
+                <ul>                    	
+                    <li>
+                        <a href="Principal.html"><span class="icon-cog"></span>Principal</a>
+                    </li>                            
+                    <li>
+                        <a href="https://github.com/AdrianLovo/"><span class="icon-github"></span>GitHub</a>
+                    </li>                        
+                    <li>
+                        <a href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Blog"><span class="icon-book"></span>Blog</a>
+                    </li>                                 
+                </ul>
+            </nav>
+        </div>    
+    </header>   
+
+    <!--Principal-->
+    <main id="Principal">
+
+       
+
+        <section>
+            <div v-for="proyecto in Proyectos">                    
+                    <div class="centrado">
+                        <a :href="proyecto.url" target="_blank">
+                            <img class="img-fluid" :src="proyecto.imagen" :alt="proyecto.nombre" style="border-radius: 5px; margin-bottom: 5px; width: 100%; height: 180px; object-fit: scale-down;">
+                        </a>
+                    </div>
+                    <div class="card-body">
                         <div class="centrado">
-                            <a :href="proyecto.url" target="_blank">
-                                <img class="img-fluid" :src="proyecto.imagen" :alt="proyecto.nombre" style="border-radius: 5px; margin-bottom: 5px; width: 100%; height: 180px; object-fit: scale-down;">
-                            </a>
-                        </div>
-                        <div class="card-body">
-                            <div class="centrado">
-                                <h5 class="card-title"><b>{{proyecto.nombre}}</b></h5>
+                            <h5 class="card-title"><b>{{proyecto.nombre}}</b></h5>
 
-                                <div v-for="tecnologia in proyecto.tecnologias" style="display: inline-flex;">
-                                    <spam class="card_lenguaje">{{tecnologia}}</spam>
-                                </div>
-                                
-                                <div style="margin-top: 10px;">    
-                                    <a  class="btn btn-success" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
-                                    <a  class="btn btn-default" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>
-                                </div>
+                            <div v-for="tecnologia in proyecto.tecnologias" style="display: inline-flex;">
+                                <spam class="card_lenguaje">{{tecnologia}}</spam>
+                            </div>
+                            
+                            <div style="margin-top: 10px;">    
+                                <a  class="btn btn-success" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
+                                <a  class="btn btn-default" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-            </div>                   
-                        
-        </div>       
+        
 
-        <!-- Cotenido Header para evitar retraso de "About default"-->
-        <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css"> 
-        <link rel="stylesheet" href="Resources/css/bootstrap.min.css">
-        <link rel="stylesheet" href="Resources/css/Guia.min.css">           
-        <link rel="stylesheet" href="Resources/css/Portafolio.min.css">
-        <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    </main>
     
-        <!------------------------------------------------------------>             
-        <script async src="Resources/js/Menu.min.js"></script>       
-        <script async src="Resources/js/Portafolio.min.js"></script>  
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'UA-144197995-1');
-        </script> 
-    </body>
+    <!--Footer--
+    <footer class="footer">
+        <h3>SOBRE ESTA PAGINA</h3>
+        <p>Este sitio web ha sido diseñado y codeado con VSC en HTML5 y CSS3 (CSS Grid y Flex Layout) con el framework Vue.js.</p>
+        <p>La web se encuentra alojada en un repositorio en GitHub (GitHubPages) y está diseñada siguiendo las tendencias en diseño web MobileFirst, por tanto se adapta perfectamente a cualquier dispositivo en el que se visualice</p>
+    </footer> -->
+
+    <!-- Cotenido Header para evitar retraso de "About"-->
+    <link rel="stylesheet" type="text/css" href="Resources2/fonts/fonts.css">  
+    <link rel="stylesheet" href="./Resources2/css/index.min.css">
+    <link rel="stylesheet" href="./Resources2/css/modal.min.css">
+
+    <!--Librerias JavaScript-->
+    <script type="text/javascript" src="Resources2/js/vue.min.js"></script>
+    <script type="text/javascript" src="Resources2/js/vue.min.js"></script>
+
+    <!--JavaScript-->
+    <script async  src="Resources2/js/Menu.min.js"></script> 
+    <script async  src="Resources2/js/index.min.js"></script>  
+    
+    <!-- Global site tag (gtag.js) - Google Analytics-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144197995-1');
+    </script>-->
+
+</body>
 </html>

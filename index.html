@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html class="no-js" lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Adrian Humberto Castillo Lovo</title>
-        <link rel="shortcut icon" href="Resources/img/favicon.ico">  
-        
-        <!-- Critical Css-->
-        <link rel="stylesheet" href="Resources/css/CriticalCss.css">
-    </head>    
+<html lang="es">
+<head>
+    <meta charset="utf-8">  
+    <meta name="robots" content="index,follow">         
+    <meta name="description" content="Portafolio y Sitio Web Personal Adrián Castillo">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <title>Adrián Humberto Castillo Lovo</title>
+    <link rel="shortcut icon" href="Resources/img/favicon.ico">  
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+
+    <!-- Critical Css-->
+    <link rel="stylesheet" href="Resources/css/CriticalCss.css">
+    <link rel="stylesheet" href="./Resources/css/menu.min.css" media="screen and (max-width: 768px)"/> 
+</head>
+
 <body>
 
-    <header>            
-        <!--Menu Principal-->
-        <div id="Menu" class="fijo">
-            <div class="menu_bar">
+    <!--Menu Principal-->
+    <header>                   
+        <div id="menu" class="header--menu">
+            <div id="menuButton" class="menu--button">
                 <a class="bt-menu"><span class="icon-menu"></span>Menu</a>
             </div>  
-            <nav>
+            <nav id="menuNav">
                 <ul>                    	
                     <li>
                         <a href="Portafolio.html"><span class="icon-cog"></span>Portafolio</a>
@@ -31,191 +34,184 @@
                         <a href="mailto:adrianhumbertocastillo@gmail.com" title="Enviar email a Adrian Castillo"><span class="icon-envelop"></span>Contactar</a>
                     </li>
                     <li>
-                        <a href="Guia.html" title="Guias y Codigo"><span class="icon-embed"></span>Guias y Codigo</a>
+                        <a href="#" title="Blog"><span class="icon-book"></span>Blog</a>
                     </li>                                 
                 </ul>
             </nav>
         </div>    
-    </header>    
+    </header>   
 
-    <div class="container">
-        <h1 class="lead"></h1>
-    </div>
-    
-    <div id="Principal" class="container">
-        
-        <div class="row">
-            <div class="col-sm-3 col-md-3 col-lg-3 hidden-xs centrado">
-                <img src="Resources/img/Foto.webp" class="fotoPerfil">                
-            </div>    
-            <div id="Formacion" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 marco">  
-                <p class="tituloSecundario">Formación</p>  
-                <div class="col-xs-5 hidden-sm hidden-md hidden-lg">
-                    <img src="Resources/img/Foto.webp" class="fotoPerfil">                    
-                </div>        
-                <div class="col-xs-7 col-sm-4 col-md-4 col-lg-4">
-                    <b>Grado Académico</b>
-                    <p>Lic. en ciencias de la Computación<br>
-                    (4 Años cursados)</p>
-                </div>
-                <div class="col-xs-7 col-sm-4 col-md-4 col-lg-4">
-                    <b>Lugar de estudio</b><br>
-                    Universidad Centroamericana <br> “José Simeón Cañas”
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4 hidden-xs">
-                    <b>Periodo</b><br>
-                    2010-2016
-                </div>                  
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 boton">
-                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ModalOtrosCursos">Otros Cursos</button>
-                </div>
-            </div>
-        </div>
+    <!--Principal-->
+    <main id="Principal">
 
-       
-        <div class="row">
-            <div class="col-sm-3 col-md-3 col-lg-3 hidden-xs">
-                <div class="marco">
-                    <p class="textoDescriptionNegrita">Adrián Humberto Castillo</p>
-                    <p class="textoDescriptionNormal">Programación | Tecnologia | Libros</p>
-                    <div class="centrado">
-                        <a href="https://www.facebook.com/adrian.humberto.12" target="_blank" class="botonesRedes">
-                            <img class="imgRedes" src="Resources/img/Redes/facebook.ico" alt="adrian.humberto.12" >
-                        </a>
-                        <a href="https://acastillo20.blogspot.com/" target="_blank" class="botonesRedes">
-                            <img class="imgRedes" src="Resources/img/Redes/blog.ico" alt="acastillo20.blogspot.com">
-                        </a>
-                        <a href="https://github.com/AdrianLovo/" target="_blank" class="botonesRedes">
-                            <img class="imgRedes" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo">
-                        </a>
-                    </div> 
-                </div>
-            </div>  
-
-            <div id="Habilidades" class="col-xs-12 col-sm-9 col-md-9 col-lg-9 marco">
+        <!--Bloque_Informacion_Personal-->
+        <aside class="informacion marco">            
+            <section class="informacion_principal">
+                <img src="Resources/img/Foto.webp" class="foto" alt="Foto de perfil">   
+                <h1 class="informacion_principal--nombre">Adrián Humberto Castillo Lovo</h1>
+                <p class="informacion_principal--subtitulo">Programación | Tecnología | Libros</p>                
+            </section>
             
-                <!-- Lenguajes de Programacion -->
-                <div>
-                    <p class="tituloSecundario">Tecnologias Utilizadas</p>
-                    <div class="flex-container">
-                        <div v-for="lenguaje in Lenguajes">
-                            <table>
-                                <tr>
-                                    <td><img :src="lenguaje.url" class="imgLenguaje" :alt="lenguaje.nombre" :title="lenguaje.nombre">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><center><p>{{lenguaje.nombre}}</p></center></td>
-                                </tr>
-                            </table>
-                        </div>                        
-                    </div>         
-                    <div class="boton">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ModalOtrosLenguajes">Otros lenguajes</button>  
-                    </div>                      
-                </div>                    
-    
+            <section class="informacion_icons">
+                <a href="https://www.facebook.com/adrian.humberto.12" target="_blank">
+                    <img class="informacion_icons--redesIcon" src="Resources/img/Redes/facebook.ico" alt="adrian.humberto.12" >
+                </a>
+                <a href="https://acastillo20.blogspot.com/" target="_blank">
+                    <img class="informacion_icons--redesIcon" src="Resources/img/Redes/blog.ico" alt="acastillo20.blogspot.com">
+                </a>                    
+                <a href="https://github.com/AdrianLovo/" target="_blank">
+                    <img class="informacion_icons--redesIcon" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo">
+                </a>
+            </section>            
+        </aside>
+
+        <!--Bloque_Formacion-->
+        <section class="formacion marco">
+            <div class="formacion_top">
+                <h2 class="formacion--titulo">Formación</h2>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9  col-sm-offset-3 col-md-offset-3 col-lg-offset-3 marco">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <h2 class="ac title-size tituloSecundario">¿En qué estoy trabajando?<i class="title_line"></i></h2> 
-                    <div v-for="trabajo in Trabajo">
-                        <span class="icon-checkmark"></span>{{trabajo}}<br> 
-                    </div>                                            
-                </div>    
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <h2 class="ac title-size tituloSecundario">Objetivos<i class="title_line"></i></h6>
-                    Actualmente mi objetivo principal es encontrar la oportunidad para formar parte del equipo de desarrolladores de una empresa dedicada al mundo de internet en general, para poder seguir evolucionando como profesional, aportando todo el conocimiento y experiencia adquirida para ser un miembro importante.
-                </div>         
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <h2 class="ac title-size tituloSecundario">Cualidades<i class="title_line"></i></h2>
-                    <div v-for="cualidad in Cualidades">
-                        <span class="icon-checkmark"></span>{{cualidad}} <br>     
-                    </div>                                         
-                </div>               
-            </div> 
-        </div>
-           
-        <!-- Modal Otros cursos -->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">           
-
-            <div id="ModalOtrosCursos" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                        <div class="modal-header">
-                            <center><h4 class="modal-title">Otros Cursos</h4></center>                              
-                        </div>
-                        <div class="modal-body">
-                            <ul class="list-group">
-                                <li class="list-group-item" v-for="curso in OtrosCursos"><b>{{curso.nombre}}</b> {{curso.lugar}}</li>
-                                <li class="list-group-item" style="cursor: pointer;">
-                                    <a href="https://platzi.com/@AdrianCas/" style="text-decoration: none" target="_bl">
-                                    <b>Otros cursos online realizados</a></b>
+            <section class="formacion_container">
+                <article class="formacion_container--article">
+                    <h3 class="formacion_container--titulo">Grado Académico</h3>
+                    <p class="formacion_container--item">Lic. en ciencias de la Computación (4 Años cursados)</p>
+                </article>
+                <article class="formacion_container--article">
+                    <h3 class="formacion_container--titulo">Lugar</h3>
+                    <p class="formacion_container--item">Universidad Centroamericana “José Simeón Cañas”</p>
+                </article>
+                <article class="formacion_container--article">
+                    <h3 class="formacion_container--titulo">Periodo</h3>
+                    <p class="formacion_container--item">2010-2016</p>
+                </article>                
+            </section>
+            <div class="formacion_bottom" >
+                <input id="btn-modal" type="checkbox">
+                <label id="btnCursos" for="btn-modal" class="formacion--button lbl-modal">Otros Cursos</label> 
+                
+                <!--Modal-->
+                <div class="informacion_modal">
+                    <div class="container_modal">
+                        <header>Otros Cursos</header>
+                        <label for="btn-modal">X</label>
+                        <div class="container--body">
+                            
+                            <ul>
+                                <li class="informacion_modal--lista" v-for="curso in OtrosCursos"><b>{{curso.nombre}}</b> {{curso.lugar}}</li>
+                                <li class="informacion_modal--lista">
+                                   <center>
+                                    <a href="https://platzi.com/@AdrianCas/" target="_blank">
+                                        Otros cursos online realizados</a>
+                                   </center> 
                                 </li>
                             </ul>                            
-                            <center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center>
+
                         </div>
-                    </div>     
+                    </div>
                 </div>  
             </div>
-        </div>   
-        
-        <!-- Modal Otros lenguajes de programacion-->    
-        <div id="ModalOtrosLenguajes" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <center><h4 class="modal-title">Otros lenguajes de programacion aprendidos en la Universidad</h4></center>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-group">
-                            <li class="list-group-item" v-for="otroLenguaje in OtrosLenguajes">
-                                <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre" class="imgOtroLenguaje">
-                                <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}} 
-                            </li>                            
-                        </ul> 
-                        <p><center><button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button></center></p>
-                    </div>                      
-                </div>     
+        </section>
+
+        <!--Bloque_Tecnologias_Utilizadas-->
+        <section class="tecnologias">
+             
+            <div class="tecnologias_container marco">
+                <h2 class="tecnologias_container--titulo">Tecnologías Utilizadas</h2>
+                <div class="tecnologias_container--items">
+                    <div v-for="lenguaje in Lenguajes">
+                        <table>
+                            <tr>
+                                <td><img :src="lenguaje.url" class="tecnologias_container--item" :alt="lenguaje.nombre" :title="lenguaje.nombre">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="tecnologias_container--item_name">{{lenguaje.nombre}}</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>                        
+                </div>         
+
+                <div class="tecnologias_bottom">
+                    <!--<button class="formacion--button">Otros Lenguajes</button>-->
+
+                    <input id="btn-modal2" type="checkbox">
+                    <label for="btn-modal2" class="formacion--button lbl-modal absoluto">Otros Lenguajes</label> 
+                    
+                    <!--Modal-->
+                    <div class="informacion_modal">
+                        <div class="container_modal">
+                            <header>Otros Lenguajes</header>
+                            <label for="btn-modal2">X</label>
+                            <div class="container--body">
+
+                                <ul>
+                                    <li class="informacion_modal--lista" v-for="otroLenguaje in OtrosLenguajes">
+                                        <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre">
+                                        <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}}
+                                    </li>
+                                </ul>                          
+
+                            </div>
+                        </div>
+                    </div>     
+
+                </div>                   
             </div>  
-        </div>
 
-    </div>
+        </section>
+
+        <!--Mas_Sobre_Mi-->
+        <section class="sobremi marco">
+            <article class="sobremi--article">   
+                <h2 class="sobremi--titulo">¿En qué estoy trabajando?</h2>
+                <div v-for="trabajo in Trabajo">
+                    <span class="icon-checkmark"></span>{{trabajo}}<br> 
+                </div>                       
+            </article>
+            <article class="sobremi--article">   
+                <h2 class="sobremi--titulo">Objetivos</h2>
+                <p>Actualmente mi objetivo principal es encontrar la oportunidad para formar parte del equipo de desarrolladores de una empresa dedicada al mundo de internet en general, para poder seguir evolucionando como profesional, aportando todo el conocimiento y experiencia adquirida para ser un miembro importante.</p>
+            </article>
+            <article class="sobremi--article">   
+                <h2 class="sobremi--titulo">¿En qué estoy trabajando?</h2>
+                <div v-for="cualidad in Cualidades">
+                    <span class="icon-checkmark"></span>{{cualidad}}<br> 
+                </div>                       
+            </article>        
+        </section>
+
+    </main>
     
-    <footer class="footer">
-        <h5>SOBRE ESTA PAGINA</h5>
-        <p>Este sitio web ha sido diseñado y codeado a mano con VSC en HTML5 y CSS3 con el framework Vue.js y Bootstrap.</p>
-        <p>La web se encuentra alojada en un repositorio en GitHub (GitHubPages) y está diseñada siguiendo las tendencias en diseño web responsive, por tanto se adapta perfectamente a cualquier dispositivo en el que se visualice</p>
-    </footer>  
 
+    <!--Footer-->
+    <footer class="footer">
+        <h3>SOBRE ESTA PAGINA</h3>
+        <p>Este sitio web ha sido diseñado y codeado con VSC en HTML5 y CSS3 (CSS Grid y Flex Layout) con el framework Vue.js.</p>
+        <p>La web se encuentra alojada en un repositorio en GitHub (GitHubPages) y está diseñada siguiendo las tendencias en diseño web MobileFirst, por tanto se adapta perfectamente a cualquier dispositivo en el que se visualice</p>
+    </footer> 
 
     <!-- Cotenido Header para evitar retraso de "About"-->
-    <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">   
-    <link rel="stylesheet" type="text/css" href="Resources/css/index.min.css">
-    <link rel="stylesheet" href="Resources/css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="Resources/fonts/fonts.css">  
+    <link rel="stylesheet" href="./Resources/css/index.min.css">
+    <link rel="stylesheet" href="./Resources/css/modal.min.css">
+
+    <!--Librerias JavaScript-->
     <script type="text/javascript" src="Resources/js/vue.min.js"></script>
-    <script async  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script async  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-    
-    <!---------------------------------------------------->
-    <script async  src="Resources/js/index.min.js"></script>                         
+
+    <!--JavaScript-->
     <script async  src="Resources/js/Menu.min.js"></script> 
+    <script async  src="Resources/js/index.min.js"></script>  
     
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-144197995-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-144197995-1');
     </script>
 
 </body>
 </html>
-
-
-
-

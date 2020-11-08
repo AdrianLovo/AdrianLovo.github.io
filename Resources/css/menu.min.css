@@ -1,0 +1,52 @@
+header nav {
+    width: 75%;
+    height: 100%;
+    left: -100%;
+    margin: 0;
+    position: fixed;
+}
+header nav ul li {
+    font-size: 1.8rem;
+    display: block;
+    float: none;
+    border-bottom: 1px solid rgba(255, 255, 255,0.3);
+}
+.header--menu .menu--button {
+    display: block;
+    padding: 20px;
+    background: #286090;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;    
+}
+.header--menu span {
+    float: left;
+    font-size: 1.8rem;
+}
+.header--menu .icon-menu{
+    float: right;
+}
+
+/*Animacion de Menu*/
+.mostrarMenu{
+    animation-name: mostrarMenu;
+    animation-duration: 1s;    
+    left: 0px;
+}
+@keyframes mostrarMenu {
+    from {left: -400px;}
+    to {left: 0px}
+}
+.quitarMenu{
+    animation-name: quitarMenu;
+    animation-duration: 1s;    
+    left: -600px;
+}
+@keyframes quitarMenu{
+    from {left: 0px;}
+    to {left: -600px}
+}
