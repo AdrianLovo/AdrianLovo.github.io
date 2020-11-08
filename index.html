@@ -120,12 +120,13 @@
                     <div v-for="lenguaje in Lenguajes">
                         <table>
                             <tr>
-                                <td><img :src="lenguaje.url" class="tecnologias_container--item" :alt="lenguaje.nombre" :title="lenguaje.nombre">
+                                <td>
+                                    <img :src="lenguaje.url" class="tecnologias_container--item" :alt="lenguaje.nombre" :title="lenguaje.nombre">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p class="tecnologias_container--item_name">{{lenguaje.nombre}}</p>
+                                    <p class="tecnologias_container--item_name etiqueta_lenguaje">{{lenguaje.nombre}}</p>
                                 </td>
                             </tr>
                         </table>
