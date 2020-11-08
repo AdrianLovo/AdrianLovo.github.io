@@ -121,34 +121,3 @@
 
 }
 
-
-/*Footer*/
-.footer_portafolio {
-    width: 100%;
-    background-color: #286090;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    bottom: 0;    
-}
-.footer_portafolio h3 {
-    padding-top: 10px;
-    font-size: 1.4rem;
-}
-.footer_portafolio p {
-    margin: 0;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-/*A partir de 768px*/
-@media screen and (max-width: 768px) {
-    .footer_portafolio{
-        position: inherit;
-        margin-top: 20px
-    }
-    .container{
-        margin-bottom: 0px;
-    }
-}
-
