@@ -1,1 +1,1 @@
-main{grid-template-columns:1fr;grid-template-areas:'informacion''formacion''tecnologias''sobremi'}.formacion{margin-top:10px}.informacion{width:95%;margin:65px auto 0 auto;height:initial}.footer{position:relative}
+main{grid-template-columns:1fr;grid-template-areas:'informacion''formacion''tecnologias''sobremi'}.formacion{margin-top:10px}.informacion{width:95%;margin:65px auto 0 auto;height:initial}.footer{position:relative}.sobremi--article{padding-right:15px;padding-left:15px}
