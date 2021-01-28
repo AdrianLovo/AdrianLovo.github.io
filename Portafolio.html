@@ -52,7 +52,7 @@
            <div v-for="proyecto in Proyectos">    
                 <article class="article_container marco">
                     <p :href="proyecto.url" target="_blank">
-                        <img class="article_container--imagen" :src="proyecto.imagen" :alt="proyecto.nombre">
+                        <img class="article_container--imagen" loading="lazy" :src="proyecto.imagen" :alt="proyecto.nombre">
                     </p>
                     <h2 class="article_body--title"><b>{{proyecto.nombre}}</b></h2>  
                     <div class="article_body">                                                
@@ -82,16 +82,6 @@
 
     <!--JavaScript-->
     <script async  src="Resources/js/Menu.min.js"></script> 
-    <script async  src="Resources/js/index.min.js"></script>  
-    
-    <!-- Global site tag (gtag.js) - Google Analytics-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144197995-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-144197995-1');
-    </script>
-
+    <script async  src="Resources/js/index.min.js"></script> 
 </body>
 </html>
