@@ -45,20 +45,20 @@
         <!--Bloque_Informacion_Personal-->
         <aside class="informacion marco">            
             <section class="informacion_principal">
-                <img src="Resources/img/Foto.webp" class=" foto" alt="Foto de perfil" width="150px" height="155px">   
+                <img data-src="Resources/img/Foto.webp" class=" foto" alt="Foto de perfil" width="150px" height="155px">   
                 <h1 class="informacion_principal--nombre">Adrián Humberto Castillo Lovo</h1> 
                 <p class="informacion_principal--subtitulo">Programación | Tecnología | Libros</p>                
             </section>
             
             <section class="informacion_icons">
                 <a href="https://www.facebook.com/adrian.humberto.12" rel="noopener" target="_blank" >
-                    <img class=" informacion_icons--redesIcon" loading="lazy" src="Resources/img/Redes/facebook.png" alt="adrian.humberto.12" width="25px" height="25px">
-                </a>
+                    <img class="informacion_icons--redesIcon" data-src="Resources/img/Redes/facebook.png" alt="adrian.humberto.12" width="25px" height="25px">
+                </a>                
                 <a href="https://github.com/AdrianLovo/" rel="noopener" target="_blank">
-                    <img class=" informacion_icons--redesIcon" loading="lazy" src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo" width="25px" height="25px">
+                    <img class="informacion_icons--redesIcon" data-src="Resources/img/Redes/github.png" alt="github.com.AdrianLovo" width="25px" height="25px">
                 </a>
                 <a href="#" rel="noopener" target="_blank">
-                    <img class=" informacion_icons--redesIcon" loading="lazy" src="Resources/img/Redes/blog.png" alt="acastillo20.blogspot.com" width="25px" height="25px">
+                    <img class="informacion_icons--redesIcon" data-src="Resources/img/Redes/blog.png" alt="acastillo20.blogspot.com" width="25px" height="25px">
                 </a>                    
             </section>            
         </aside>
@@ -120,7 +120,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <img :src="lenguaje.url" loading="lazy" class="tecnologias_container--item" alt="imagen de lenguaje" :title="lenguaje.nombre" width="48px" height="48px">
+                                    <img :data-src="lenguaje.url" class="tecnologias_container--item" alt="imagen de lenguaje" :title="lenguaje.nombre" width="48px" height="48px">
                                 </td>
                             </tr>
                             <tr>
@@ -147,14 +147,14 @@
 
                                 <ul>
                                     <li class="informacion_modal--lista" v-for="otroLenguaje in OtrosLenguajes">
-                                        <img :src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre"  width="25px" height="25px">
+                                        <img :data-src="otroLenguaje.url" :alt="otroLenguaje.nombre" :title="otroLenguaje.nombre"  width="25px" height="25px">
                                         <b>{{otroLenguaje.nombre}}:</b> {{otroLenguaje.lugar}}
                                     </li>
                                 </ul>                          
 
                             </div>
                         </div>
-                    </div>     
+                    </div>    
 
                 </div>                   
             </div>  

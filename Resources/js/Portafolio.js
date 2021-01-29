@@ -32,5 +32,29 @@ var vm = new Vue({
             repositorio: "https://github.com/AdrianLovo/AdrianLovo.github.io",
             tecnologias: ["HTML", "CSS | Responsive", "JavaScript", "Vue.js"]
         }]
-    }
+    },
+
+     //Ya esta disponible el DOM
+     mounted() {
+
+        //Lazy Load de todas las imagenes cargadas
+        const isIntersecting = (entry) => {
+            return entry.isIntersecting     //True si esta dentro de la pantalla
+        }
+
+        const loadImage = (entry) => {
+            const imagen = entry.target   
+            const url = imagen.dataset.src
+            imagen.src = url                        
+            observer.unobserve(imagen)      //Eliminar el evento de la imagen ya que dejo de ser necesario
+        }
+
+        const observer = new IntersectionObserver((entries) => {   //Entradas que esta escuchando
+            entries.filter(isIntersecting).forEach(loadImage)
+        })
+
+        const listNodes = document.getElementsByTagName('img')
+        const arrayImages = [...listNodes]
+        arrayImages.forEach( img =>  observer.observe(img))
+    },
 });
