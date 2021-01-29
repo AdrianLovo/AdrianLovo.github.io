@@ -7,6 +7,9 @@
 
 ## Frameworks Utilizados
 	- Vue.js
+	
+## Otros
+	- Optimizacion de Carga de imagenes atraves de Lazy Load
 
 
 
