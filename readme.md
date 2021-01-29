@@ -10,7 +10,7 @@
 	
 ## Otros
 	- Optimizacion de Carga de imagenes atraves de Lazy Load
-	- Responsive (Sin utilizacion de frameworks)
+	- Responsive (Sin utilización de frameworks)
 
 
 
