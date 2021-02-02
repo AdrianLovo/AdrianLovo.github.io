@@ -36,12 +36,12 @@
 
 .sitio--button {
     font-size: 1.5rem;
-    border: 1px solid #5cb85c;
+    border: 1px solid #000000;
     background-color: #4cae4c;
-    color: #fff;
+    color: black;
     padding: 6px 12px;
     cursor: pointer;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .sitio--button:hover {
@@ -62,7 +62,7 @@
 
 .github--button {
     font-size: 1.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(3, 3, 3);
     background-color: #fff;
     color: #000;
     padding: 6px 12px;
@@ -99,7 +99,7 @@
 }
 
 .article_body--title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     line-height: 2rem;
     text-align: center;
 }
@@ -113,7 +113,7 @@
 
 .article_body--tecnologias{
     color: #337ab7;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     line-height: 2rem;
     margin-top: 20px;
     margin-left: 20px;
@@ -132,6 +132,7 @@
 .article_body--descripcion{
     margin-left: 20px;
     margin-top: 5px;
+    font-size: 1.2rem;
 }
 
 .article_body--links{
@@ -145,7 +146,14 @@
 }
 
 .article_body--links a{
+    font-size: 1.8rem;
+    font-weight: 300;
     margin-right: 10px;
+    color: #286090;
+    text-decoration: none;
+}
+.article_body--links a:hover{
+    color: #337ab7;    
 }
 
 .article_footer {
@@ -153,6 +161,26 @@
     margin-bottom: 10px;
     display: flex;
     justify-content: center
+}
+
+.article_body--return{
+    color: #337ab7;
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.article_body--return a{
+    border: 1px solid #286090;
+    background-color: #286090;
+    color: white;
+    padding: 5px;
+}
+.article_body--return a:hover{
+    background: #337ab7;
+    border: #439eb9;
 }
 
 .etiqueta_lenguaje {
@@ -179,18 +207,15 @@
     margin: 2px;
     min-width: 230px;
     width: 230px;
+    min-height: 30px;    
+}
+
+.etiqueta_miniproyecto:hover{
+    background: #337ab7;
+    border: #439eb9;
+    color: white;
 }
 
 .etiqueta_miniproyecto a{
     cursor: pointer;
 }
-
-.article_body--return{
-    color: #337ab7;
-    font-size: 1.3rem;
-    line-height: 2rem;
-    margin-top: 20px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-

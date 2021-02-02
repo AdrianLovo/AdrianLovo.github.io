@@ -51,8 +51,8 @@ var vm = new Vue({
             mostrarMas: true,
             miniProyectoNombre: "",
             miniProyectoTecnologia : [],
-            miniProyectoRepositorio: "",
-            miniProyectoSitio: "",
+            miniProyectoRepositorio: "#",
+            miniProyectoSitio: "#",
             miniProyectoDescripcion: ""        
         }
     },

@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">        
     <title>Adrián Humberto Castillo Lovo</title>
     <link rel="shortcut icon" href="Resources/img/favicon.ico">  
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700" rel="stylesheet">
 
     <!-- Critical Css-->
     <link rel="stylesheet" href="./Resources/css/CriticalCss.min.css">   
@@ -49,10 +48,40 @@
 
         <!--Bloque_Informacion_Personal-->
         <section class="container" >            
-           <div v-for="proyecto in Proyectos">    
+                
+            <div>    
+                <article class="article_container marco">                    
+                    <div class="article_body">                                                
+                        <h2 class="article_body--title" v-show="mostrarMas"><b>Mini Proyectos</b></h2>
+                            <div class="etiqueta_miniproyecto marco" v-for="miniproyecto in MiniProyectos" v-show="mostrarMas">
+                                <a v-on:click="masInfo(miniproyecto)">{{miniproyecto.nombre}}</a>  
+                            </div> 
+                            <div v-show="!mostrarMas">
+                                <h2 class="article_body--tecnologias">{{miniProyectoNombre}}</h2> 
+                                <p class="article_body--descripcion">{{miniProyectoDescripcion}}</p>                                
+                                <h3 class="article_body--tecnologiasTitle">Tecnologias Utilizadas:</h3>                                
+                                <ul v-for="tecnologia in miniProyectoTecnologia">
+                                   <li class="article_body--tecnologiasList">{{tecnologia}}</li> 
+                                </ul>
+                                
+                                <div class="article_body--links">
+                                    <a rel="noopener" :href="miniProyectoSitio" target="_blank">WebSite</a>                                
+                                    <a rel="noopener" :href="miniProyectoRepositorio" target="_blank">Repositorio</a>
+                                </div>
+
+                                <h2 class="article_body--return">                                   
+                                    <p v-on:click="menosInfo()"> <- Regresar </p>                                   
+                                </h2>
+                            </div>                                                
+                        </div>
+                                        
+                </article>           
+            </div> 
+
+            <div v-for="proyecto in Proyectos">    
                 <article class="article_container marco">
                     <p :href="proyecto.url" target="_blank">
-                        <img class="article_container--imagen" :data-src="proyecto.imagen" :alt="proyecto.nombre">
+                        <img class="article_container--imagen" :data-src="proyecto.imagen" :alt="proyecto.nombre" width="258px" height="180px">
                     </p>
                     <h2 class="article_body--title"><b>{{proyecto.nombre}}</b></h2>  
                     <div class="article_body">                                                
@@ -61,43 +90,9 @@
                         </div>                                                 
                     </div>
                     <div class="article_footer">                                 
-                        <a rel="noopener" class="sitio--button" :href="proyecto.sitio" target="_blank"><span class="icon-earth"></span> Website</a>
-                        <a rel="noopener" class="github--button" :href="proyecto.repositorio" target="_blank"><span class="icon-github"></span> Repositorio</a>                                            
+                        <a rel="noopener" class="sitio--button" :href="proyecto.sitio" target="_blank">Website</a>
+                        <a rel="noopener" class="github--button" :href="proyecto.repositorio" target="_blank">Repositorio</a>                                            
                     </div>                    
-                </article>           
-            </div> 
-            
-            <div>    
-                <article class="article_container marco">
-                    
-                    <div class="article_body">                                                
-                        <h2 class="article_body--title" v-show="mostrarMas"><b>Mini Proyectos</b></h2>
-                            <div class="etiqueta_miniproyecto" v-for="miniproyecto in MiniProyectos" v-show="mostrarMas">
-                                <a v-on:click="masInfo(miniproyecto)">{{miniproyecto.nombre}} 
-                                    <spam>-></spam> 
-                                </a>  
-                            </div> 
-                            <div v-show="!mostrarMas">
-                                <h2 class="article_body--tecnologias">{{miniProyectoNombre}}</h2> 
-                                <p class="article_body--descripcion">
-                                    {{miniProyectoDescripcion}}
-                                </p>                                
-                                <h3 class="article_body--tecnologiasTitle">Tecnologias Utilizadas:</h3>                                
-                                <ul v-for="tecnologia in miniProyectoTecnologia">
-                                   <li class="article_body--tecnologiasList">{{tecnologia}}</li> 
-                                </ul>
-                                
-                                <div class="article_body--links">
-                                    <a :href="miniProyectoSitio" target="_blank">WebSite</a>                                
-                                    <a :href="miniProyectoRepositorio" target="_blank">Repositorio</a>
-                                </div>
-
-                                <h2 class="article_body--return">                                   
-                                    <a v-on:click="menosInfo()"> <- Regresar </a>                                   
-                                </h2>
-                            </div>                                                
-                        </div>
-                                        
                 </article>           
             </div> 
             
