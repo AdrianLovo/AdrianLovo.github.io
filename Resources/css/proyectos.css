@@ -208,7 +208,11 @@
     margin: 2px;
     min-width: 230px;
     width: 230px;
-    min-height: 30px;    
+    min-height: 30px;
+    display: flex;       
+    justify-content: center;
+    align-content: center; 
+    flex-direction: column;
 }
 
 .etiqueta_miniproyecto:hover{
