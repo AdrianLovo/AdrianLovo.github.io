@@ -6,7 +6,20 @@ main {
 .informacion {
     width: 95%;
     margin: 65px auto 0 auto;
-    height: initial
+    height: initial;
+    display: flex;
+    justify-content: center;
+}
+
+.informacion_principal {
+    padding-top: 10px;
+    width: 35%;
+}
+.informacion_frase{
+    padding-top: 10px;
+    width: 35%;
+    display: flex;
+    align-items: center;
 }
 
 .formacion_container {

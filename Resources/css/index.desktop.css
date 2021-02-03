@@ -3,14 +3,26 @@ main {
     grid-template-areas: 'informacion''formacion''tecnologias''sobremi'
 }
 
-.formacion {
-    margin-top: 10px
-}
-
 .informacion {
     width: 95%;
     margin: 65px auto 0 auto;
-    height: initial
+    height: initial;
+}
+
+.informacion_frase{
+    padding-top: 10px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.informacion_principal {
+    padding-top: 10px;
+    width: 20%;
+}
+
+.formacion {
+    margin-top: 10px
 }
 
 .footer {

@@ -1,21 +1,31 @@
 .informacion {
-    grid-area: informacion;
     margin: auto;
     max-width: 1024px;
     width: 95%;
     text-align: center;
-    margin-top: 80px
+    margin-top: 80px;
 }
 
-.informacion_principal--nombre {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 5px
+.informacion_principal {
+    grid-area: informacion;
+    padding-top: 10px;
+    width: 100%;
 }
 
-.informacion_principal--subtitulo {
+.informacion_frase{
+    grid-area: descripcion;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.informacion_frase p{
+    font-size: 1.6rem;
     font-weight: 300;
-    font-size: 1.4rem
+    margin-bottom: 5px;        
+    padding: 15px;
 }
 
 .informacion_icons--redesIcon {
@@ -29,10 +39,6 @@
 
 .informacion_icons a {
     text-decoration: none
-}
-
-.informacion_principal {
-    padding-top: 10px
 }
 
 .informacion_principal .foto {

@@ -24,7 +24,7 @@ main {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-areas: 'informacion''formacion''tecnologias''sobremi'
+    grid-template-areas: 'informacion' 'descripcion' 'formacion''tecnologias''sobremi'
 }
 
 header {

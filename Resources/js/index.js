@@ -83,7 +83,7 @@ var vm = new Vue({
             url: "Resources/img/Lenguajes/racket.png"
         }],
         Cualidades: [" Autodidacta", " Curioso y auto motivado", " Comprometido y responsable", " Alta atención al detalle y crítico conmigo mismo", " Ganas de trabajar, aprender y seguir mejorando"],
-        Trabajo: [" Framework PHP - Laravel", " Vue.js y React.js", " Programación Web responsive (Grid y Flexbox)", "Utilizar de manera constante mis conocimientos en proyectos personales", " Perfeccionar y aumentar mis conocimientos sobre diferentes tecnologías"],
+        Trabajo: [ " Vue.js", " Framework Laravel", " Programación Web responsive (Grid y Flexbox)", "Utilizar de manera constante mis conocimientos en proyectos personales", " Perfeccionar y aumentar mis conocimientos sobre diferentes tecnologías"],
         Objetivos: []
     },
 
