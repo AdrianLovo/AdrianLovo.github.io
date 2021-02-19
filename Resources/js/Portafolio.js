@@ -29,17 +29,23 @@ var vm = new Vue({
                 tecnologias: ["HTML", "CSS"],
                 descripcion: "Sitio web Batatabit, creado y diseñado a partir de MobileFirst"
             },{
+                nombre: "Blog Personal Básico",
+                sitio: "https://adrianlovo.github.io/Maquetacion_BlogPersonal/",
+                repositorio: "https://github.com/AdrianLovo/Maquetacion_BlogPersonal",
+                tecnologias: ["HTML", "CSS | Responsive"],
+                descripcion: "Proyecto base de Blog Personal creado con HTML y CSS"
+            },{
                 nombre: "Copy Landing Page Google",
                 sitio: "https://adrianlovo.github.io/CopyLandingPageGoogle/",
                 repositorio: "https://github.com/AdrianLovo/CopyLandingPageGoogle",
                 tecnologias: ["HTML", "CSS"],
                 descripcion: "Copia (Estilo y estructura) de Landing Page de Pagina principal de Google"
             },{
-                nombre: "Ejemplo Blog Personal",
-                sitio: "https://adrianlovo.github.io/Maquetacion_BlogPersonal/",
-                repositorio: "https://github.com/AdrianLovo/Maquetacion_BlogPersonal",
-                tecnologias: ["HTML", "CSS | Responsive"],
-                descripcion: "Proyecto base de Blog Personal creado con HTML y CSS"
+                nombre: "Publicaciones con PHP y Fetch",
+                sitio: "http://64.227.22.30:8080/",
+                repositorio: "https://github.com/AdrianLovo/Publicaciones_FETCH_PHP",
+                tecnologias: ["HTML", "CSS | Bootstrap", "JavaScript | Fetch", "PHP"],
+                descripcion: "Sitio Web de prueba para publicar comentarios con una imagen adjunta, como prueba del uso de API nativa Fetch"
             }],
 
             mostrarMas: true,
