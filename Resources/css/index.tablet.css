@@ -12,6 +12,29 @@ main {
 }
 
 .informacion_principal {
+    display: inline-block; 
+}
+
+.informacion_redes a{
+    height: 45px;
+    padding-bottom: 20px;
+    margin-left: 2px;
+}
+
+.informacion .informacion_redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0px;
+}
+
+.informacion_foto{
+    max-height: 145px;
+}
+
+
+
+.informacion_principal {
     padding-top: 10px;
     width: 35%;
 }

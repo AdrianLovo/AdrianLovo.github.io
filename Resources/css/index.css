@@ -2,23 +2,35 @@
     margin: auto;
     max-width: 1024px;
     width: 95%;
-    text-align: center;
     margin-top: 80px;
+    text-align: center;     
 }
 
 .informacion_principal {
     grid-area: informacion;
     padding-top: 10px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.informacion .informacion_redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+}
+.informacion_redes a{
+    height: 45px;
+}
+
 
 .informacion_frase{
     grid-area: descripcion;
     padding-top: 10px;
     width: 100%;
     display: flex;
-    align-items: center;
-    
+    justify-content: center;   
 }
 
 .informacion_frase h1{
