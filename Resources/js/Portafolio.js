@@ -42,7 +42,7 @@ var vm = new Vue({
                 descripcion: "Copia (Estilo y estructura) de Landing Page de Pagina principal de Google"
             },{
                 nombre: "Publicaciones con PHP y Fetch",
-                sitio: "http://64.227.22.30:8080/",
+                sitio: "http://64.227.22.30:8080/Fetch_Images/",
                 repositorio: "https://github.com/AdrianLovo/Publicaciones_FETCH_PHP",
                 tecnologias: ["HTML", "CSS | Bootstrap", "JavaScript | Fetch", "PHP"],
                 descripcion: "Sitio Web de prueba para publicar comentarios con una imagen adjunta, como prueba del uso de API nativa Fetch"
