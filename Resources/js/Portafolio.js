@@ -6,7 +6,7 @@ var vm = new Vue({
                 nombre: "BlogVideo - Firebase",
                 imagen: "Resources/img/Proyectos/1.png",
                 sitio: "https://ahcastillo-blog-platzi.web.app/",
-                repositorio: "https://github.com/AdrianLovo/BlogVideo_Firebase",
+                repositorio: "",
                 tecnologias: ["HTML", "CSS", "JavaScript", "Firebase"]
             },{
                 nombre: "Exchange - Criptomonedas",
