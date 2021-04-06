@@ -18,26 +18,26 @@ var vm = new Vue({
 
             MiniProyectos: [{
                 nombre: "App Video",
-                sitio: "https://adrianlovo.github.io/App_Video/",
-                repositorio: "https://github.com/AdrianLovo/App_Video",
+                sitio: "http://adrianhumberto.com/HTMLCSSJavaScript_AppVideo/",
+                repositorio: "https://github.com/AdrianLovo/HTMLCSSJavaScript_AppVideo",
                 tecnologias: ["HTML", "CSS", "JavaScript"],
                 descripcion: "Sitio de consulta de peliculas por genero de peliculas a traves de API"
             },{
                 nombre: "Batatabit MobileFirst",
-                sitio: "https://adrianlovo.github.io/MobileFirst/",
-                repositorio: "https://github.com/AdrianLovo/MobileFirst",
+                sitio: "http://adrianhumberto.com/HMTLCSS_MobileFirst/",
+                repositorio: "https://github.com/AdrianLovo/HMTLCSS_MobileFirst",
                 tecnologias: ["HTML", "CSS"],
                 descripcion: "Sitio web Batatabit, creado y diseñado a partir de MobileFirst"
             },{
                 nombre: "Blog Personal Básico",
-                sitio: "https://adrianlovo.github.io/Maquetacion_BlogPersonal/",
-                repositorio: "https://github.com/AdrianLovo/Maquetacion_BlogPersonal",
+                sitio: "http://adrianhumberto.com/HTMLCSS_BlogPersonal/",
+                repositorio: "https://github.com/AdrianLovo/HTMLCSS_BlogPersonal",
                 tecnologias: ["HTML", "CSS | Responsive"],
                 descripcion: "Proyecto base de Blog Personal creado con HTML y CSS"
             },{
                 nombre: "Copy Landing Page Google",
-                sitio: "https://adrianlovo.github.io/CopyLandingPageGoogle/",
-                repositorio: "https://github.com/AdrianLovo/CopyLandingPageGoogle",
+                sitio: "http://adrianhumberto.com/HTMLCSS_CopyLandingPageGoogle/",
+                repositorio: "https://github.com/AdrianLovo/HTMLCSS_CopyLandingPageGoogle",
                 tecnologias: ["HTML", "CSS"],
                 descripcion: "Copia (Estilo y estructura) de Landing Page de Pagina principal de Google"
             },{
