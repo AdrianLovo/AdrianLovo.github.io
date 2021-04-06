@@ -16,13 +16,15 @@ var vm = new Vue({
                 tecnologias: ["HTML", "CSS", "JavaScript", "Vue.js | Vue CLI | Vue Route"]
             }],
 
+            
+
             MiniProyectos: [{
                 nombre: "App Video",
                 sitio: "http://adrianhumberto.com/HTMLCSSJavaScript_AppVideo/",
                 repositorio: "https://github.com/AdrianLovo/HTMLCSSJavaScript_AppVideo",
                 tecnologias: ["HTML", "CSS", "JavaScript"],
                 descripcion: "Sitio de consulta de peliculas por genero de peliculas a traves de API"
-            },{
+            },{          
                 nombre: "Batatabit MobileFirst",
                 sitio: "http://adrianhumberto.com/HMTLCSS_MobileFirst/",
                 repositorio: "https://github.com/AdrianLovo/HMTLCSS_MobileFirst",
@@ -34,6 +36,12 @@ var vm = new Vue({
                 repositorio: "https://github.com/AdrianLovo/HTMLCSS_BlogPersonal",
                 tecnologias: ["HTML", "CSS | Responsive"],
                 descripcion: "Proyecto base de Blog Personal creado con HTML y CSS"
+            },{
+                nombre: "Paginacion PHP Puro",
+                sitio: "http://64.227.22.30:8080/PHP_Paginacion/",
+                repositorio: "https://github.com/AdrianLovo/PHP_Paginacion",
+                tecnologias: ["HTML", "CSS", "PHP"],
+                descripcion: "Paginacion en PHP Puro sin frameworks ni JavaScript"
             },{
                 nombre: "Copy Landing Page Google",
                 sitio: "http://adrianhumberto.com/HTMLCSS_CopyLandingPageGoogle/",
